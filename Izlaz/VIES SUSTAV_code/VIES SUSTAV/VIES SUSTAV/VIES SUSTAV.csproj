@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{115D2B56-1CA9-4657-9D5C-48EF13EF265B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VIES_SUSTAV</RootNamespace>
+    <AssemblyName>VIES SUSTAV</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dsT27.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsT27.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ds_porezniObveznik.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_porezniObveznik.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_sifarnici_lookUp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_sifarnici_lookUp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_T27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_T27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SifarniciForms\sifarnikDjelatnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikDjelatnosti.Designer.cs">
+      <DependentUpon>sifarnikDjelatnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikIspostava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikIspostava.Designer.cs">
+      <DependentUpon>sifarnikIspostava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikObveze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikObveze.Designer.cs">
+      <DependentUpon>sifarnikObveze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikPodrucniUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikPodrucniUredi.Designer.cs">
+      <DependentUpon>sifarnikPodrucniUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikVlasnistva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikVlasnistva.Designer.cs">
+      <DependentUpon>sifarnikVlasnistva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikZemalja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifarniciForms\sifarnikZemalja.Designer.cs">
+      <DependentUpon>sifarnikZemalja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViesForms\detaljniPodaciObveznika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViesForms\detaljniPodaciObveznika.Designer.cs">
+      <DependentUpon>detaljniPodaciObveznika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViesForms\Registar VIES poreznih obveznika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViesForms\Registar VIES poreznih obveznika.Designer.cs">
+      <DependentUpon>Registar VIES poreznih obveznika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViesForms\UnosNovogObveznika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViesForms\UnosNovogObveznika.Designer.cs">
+      <DependentUpon>UnosNovogObveznika.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ViesForms\detaljniPodaciObveznika.resx">
+      <DependentUpon>detaljniPodaciObveznika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViesForms\Registar VIES poreznih obveznika.resx">
+      <DependentUpon>Registar VIES poreznih obveznika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViesForms\UnosNovogObveznika.resx">
+      <DependentUpon>UnosNovogObveznika.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dsT27.dbml.layout">
+      <DependentUpon>dsT27.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SifarniciForms\sifarnikDjelatnosti.resx">
+      <DependentUpon>sifarnikDjelatnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SifarniciForms\sifarnikIspostava.resx">
+      <DependentUpon>sifarnikIspostava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SifarniciForms\sifarnikObveze.resx">
+      <DependentUpon>sifarnikObveze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SifarniciForms\sifarnikPodrucniUredi.resx">
+      <DependentUpon>sifarnikPodrucniUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SifarniciForms\sifarnikVlasnistva.resx">
+      <DependentUpon>sifarnikVlasnistva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SifarniciForms\sifarnikZemalja.resx">
+      <DependentUpon>sifarnikZemalja.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="dsT27.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dsT27.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_porezniObveznik.xsc">
+      <DependentUpon>ds_porezniObveznik.xsd</DependentUpon>
+    </None>
+    <None Include="ds_porezniObveznik.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_porezniObveznik.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_porezniObveznik.xss">
+      <DependentUpon>ds_porezniObveznik.xsd</DependentUpon>
+    </None>
+    <None Include="ds_sifarnici_lookUp.xsc">
+      <DependentUpon>ds_sifarnici_lookUp.xsd</DependentUpon>
+    </None>
+    <None Include="ds_sifarnici_lookUp.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_sifarnici_lookUp.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_sifarnici_lookUp.xss">
+      <DependentUpon>ds_sifarnici_lookUp.xsd</DependentUpon>
+    </None>
+    <None Include="ds_T27.xsc">
+      <DependentUpon>ds_T27.xsd</DependentUpon>
+    </None>
+    <None Include="ds_T27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_T27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_T27.xss">
+      <DependentUpon>ds_T27.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

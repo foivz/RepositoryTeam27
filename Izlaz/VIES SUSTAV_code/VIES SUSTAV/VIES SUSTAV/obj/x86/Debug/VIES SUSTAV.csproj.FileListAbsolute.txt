@@ -1,0 +1,19 @@
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\bin\Debug\VIES SUSTAV.exe
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\bin\Debug\VIES SUSTAV.pdb
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.frm_Osnovna.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.Properties.Resources.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES SUSTAV.exe
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES SUSTAV.pdb
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\bin\Debug\VIES SUSTAV.exe.config
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.SifarniciForms.frm_sifarnikPodrucniUredi.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.SifarniciForms.frm_sifarnikIspostava.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.SifarniciForms.frm_sifarnikDjelatnosti.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.SifarniciForms.frm_sifarnikZemalja.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.SifarniciForms.frm_sifarnikObveze.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.SifarniciForms.frm_sifarnikVlasnistva.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.ViesForms.frm_UnosNovogObveznika.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.ViesForms.frn_registarVIES.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\Desktop\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.ViesForms.frm_detaljniPodaciObveznika.resources
