@@ -26,6 +26,8 @@ namespace VIES_SUSTAV.ViesForms
 
         private void frm_UnosNovogObveznika_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ds_sifarnici_lookUp.tbl_sifarnikAktivnosti' table. You can move, or remove it, as needed.
+            this.tbl_sifarnikAktivnostiTableAdapter.Fill(this.ds_sifarnici_lookUp.tbl_sifarnikAktivnosti);
             // TODO: This line of code loads data into the 'ds_sifarnici_lookUp.tbl_sifarnikObveze' table. You can move, or remove it, as needed.
             this.tbl_sifarnikObvezeTableAdapter.Fill(this.ds_sifarnici_lookUp.tbl_sifarnikObveze);
             // TODO: This line of code loads data into the 'ds_sifarnici_lookUp.tbl_sifarnikVlasnistva' table. You can move, or remove it, as needed.
@@ -55,19 +57,8 @@ namespace VIES_SUSTAV.ViesForms
                 int sifraPodrucnog = int.Parse(cbox_podrucni.SelectedValue.ToString());
 
                 this.tbl_sifarnikIspostavaTableAdapter.FillByPodrucni(this.ds_sifarnici_lookUp.tbl_sifarnikIspostava, sifraPodrucnog);
-            
+
             }
-        }
-
-        private void txt_OIB_Validating(object sender, CancelEventArgs e)
-        {
-            
-        
-        }
-
-        private void txt_OIB_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         // Provjera OIB-a
@@ -99,10 +90,7 @@ namespace VIES_SUSTAV.ViesForms
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void txt_eMail_Leave(object sender, EventArgs e)
         {
@@ -116,23 +104,7 @@ namespace VIES_SUSTAV.ViesForms
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_status_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void cbox_aktivnost_SelectedIndexChanged(object sender, EventArgs e)
-        {
-                
-                txt_status.Text = cbox_aktivnost.SelectedItem.ToString();
-              
-        }
-
+               
         //Spremi poreznog obveznika
         private void btn_SpremiPorObv_Click(object sender, EventArgs e)
         {
@@ -147,9 +119,10 @@ namespace VIES_SUSTAV.ViesForms
                     int djelatnost = int.Parse(txt_Djelatnost.Text.ToString());
                     int vlasnistvo = int.Parse(txt_sifraVlasnistva.Text.ToString());
                     int obveza = int.Parse(txt_sifraObveze.Text.ToString());
+                    int aktivnost = int.Parse(txt_aktivnost.Text.ToString());
 
                     this.tbl_porezniObveznikTableAdapter.Insert(this.txt_OIB.Text.ToString(), podrucni, ispostava, this.txt_nazivObveznika.Text.ToString(), this.txt_adresa.Text.ToString(), this.txt_Zemlja.Text.ToString(), djelatnost,
-                        this.txt_telefon.Text.ToString(), this.txt_eMail.Text.ToString(), vlasnistvo, obveza, this.txt_korisnickoIme.Text.ToString(), this.txt_Zaporka.Text.ToString(), System.DateTime.Today, this.txt_status.Text.ToString());
+                        this.txt_telefon.Text.ToString(), this.txt_eMail.Text.ToString(), vlasnistvo, obveza, this.txt_korisnickoIme.Text.ToString(), this.txt_Zaporka.Text.ToString(), System.DateTime.Today,this.txt_aktivnost.Text.ToString());
 
                     MessageBox.Show("Podaci su uspješno spremljeni");
                 }
@@ -157,9 +130,7 @@ namespace VIES_SUSTAV.ViesForms
 
             catch (System.Exception excep)
             {
-
                 MessageBox.Show(excep.Message);
-
             }
         }
 

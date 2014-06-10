@@ -52,6 +52,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsT27.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ds_porezniObveznik.cs">
+      <DependentUpon>ds_porezniObveznik.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ds_porezniObveznik.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -111,11 +115,11 @@
     <Compile Include="SifarniciForms\sifarnikZemalja.Designer.cs">
       <DependentUpon>sifarnikZemalja.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViesForms\detaljniPodaciObveznika.cs">
+    <Compile Include="ViesForms\Detaljni pregled.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViesForms\detaljniPodaciObveznika.Designer.cs">
-      <DependentUpon>detaljniPodaciObveznika.cs</DependentUpon>
+    <Compile Include="ViesForms\Detaljni pregled.Designer.cs">
+      <DependentUpon>Detaljni pregled.cs</DependentUpon>
     </Compile>
     <Compile Include="ViesForms\Registar VIES poreznih obveznika.cs">
       <SubType>Form</SubType>
@@ -129,8 +133,8 @@
     <Compile Include="ViesForms\UnosNovogObveznika.Designer.cs">
       <DependentUpon>UnosNovogObveznika.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ViesForms\detaljniPodaciObveznika.resx">
-      <DependentUpon>detaljniPodaciObveznika.cs</DependentUpon>
+    <EmbeddedResource Include="ViesForms\Detaljni pregled.resx">
+      <DependentUpon>Detaljni pregled.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViesForms\Registar VIES poreznih obveznika.resx">
       <DependentUpon>Registar VIES poreznih obveznika.cs</DependentUpon>
@@ -152,6 +156,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SifarniciForms\sifarnikDjelatnosti.resx">
       <DependentUpon>sifarnikDjelatnosti.cs</DependentUpon>
@@ -222,6 +227,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

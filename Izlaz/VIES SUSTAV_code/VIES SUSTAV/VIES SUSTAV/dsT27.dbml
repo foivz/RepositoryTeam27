@@ -1,26 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="T27_DB" Class="dsT27DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=31.147.204.119\PISERVER,1433;Initial Catalog=T27_DB;Persist Security Info=True;User ID=T27_User;Pooling=False" SettingsObjectName="VIES_SUSTAV.Properties.Settings" SettingsPropertyName="T27_DBConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.tbl_porezniObveznik" Member="tbl_porezniObvezniks">
-    <Type Name="tbl_porezniObveznik">
-      <Column Name="OIB" Type="System.String" DbType="NChar(11) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="PodrucniUredPU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="PoreznaIspostava" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NazivObveznika" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Adresa" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Država" Type="System.String" DbType="NChar(2) NOT NULL" CanBeNull="false" />
-      <Column Name="Djelatnost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Telefon" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
-      <Column Name="e_mail" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
-      <Column Name="OblikVlasnistva" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="VrstaObveze" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="tbl_sifarnikDjelatnosti_tbl_porezniObveznik" Member="tbl_sifarnikDjelatnosti" ThisKey="Djelatnost" OtherKey="sifraDjelatnosti" Type="tbl_sifarnikDjelatnosti" IsForeignKey="true" />
-      <Association Name="tbl_sifarnikIspostava_tbl_porezniObveznik" Member="tbl_sifarnikIspostava" ThisKey="PoreznaIspostava" OtherKey="sifraIspostave" Type="tbl_sifarnikIspostava" IsForeignKey="true" />
-      <Association Name="tbl_sifarnikObveze_tbl_porezniObveznik" Member="tbl_sifarnikObveze" ThisKey="VrstaObveze" OtherKey="sifraObveze" Type="tbl_sifarnikObveze" IsForeignKey="true" />
-      <Association Name="tbl_sifarnikPodrucnihUreda_tbl_porezniObveznik" Member="tbl_sifarnikPodrucnihUreda" ThisKey="PodrucniUredPU" OtherKey="sifraPodrucnogUreda" Type="tbl_sifarnikPodrucnihUreda" IsForeignKey="true" />
-      <Association Name="tbl_sifarnikVlasnistva_tbl_porezniObveznik" Member="tbl_sifarnikVlasnistva" ThisKey="OblikVlasnistva" OtherKey="sifraVlasnistva" Type="tbl_sifarnikVlasnistva" IsForeignKey="true" />
-      <Association Name="tbl_sifarnikZemlja_tbl_porezniObveznik" Member="tbl_sifarnikZemlja" ThisKey="Država" OtherKey="sifraZemlje" Type="tbl_sifarnikZemlja" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.tbl_sifarnikDjelatnosti" Member="tbl_sifarnikDjelatnostis">
     <Type Name="tbl_sifarnikDjelatnosti">
       <Column Name="sifraDjelatnosti" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -48,8 +27,8 @@
     <Type Name="tbl_sifarnikPodrucnihUreda">
       <Column Name="sifraPodrucnogUreda" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="nazivPodrucnogUreda" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
-      <Association Name="tbl_sifarnikPodrucnihUreda_tbl_porezniObveznik" Member="tbl_porezniObvezniks" ThisKey="sifraPodrucnogUreda" OtherKey="PodrucniUredPU" Type="tbl_porezniObveznik" />
       <Association Name="tbl_sifarnikPodrucnihUreda_tbl_sifarnikIspostava" Member="tbl_sifarnikIspostavas" ThisKey="sifraPodrucnogUreda" OtherKey="sifraPodrucnogUreda" Type="tbl_sifarnikIspostava" />
+      <Association Name="tbl_sifarnikPodrucnihUreda_tbl_porezniObveznik" Member="tbl_porezniObvezniks" ThisKey="sifraPodrucnogUreda" OtherKey="PodrucniUredPU" Type="tbl_porezniObveznik" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_sifarnikVlasnistva" Member="tbl_sifarnikVlasnistvas">
@@ -64,6 +43,39 @@
       <Column Name="sifraZemlje" Type="System.String" DbType="NChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="nazivZemlje" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
       <Association Name="tbl_sifarnikZemlja_tbl_porezniObveznik" Member="tbl_porezniObvezniks" ThisKey="sifraZemlje" OtherKey="Država" Type="tbl_porezniObveznik" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_porezniObveznik" Member="tbl_porezniObvezniks">
+    <Type Name="tbl_porezniObveznik">
+      <Column Name="OIB" Type="System.String" DbType="NChar(11) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PodrucniUredPU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PoreznaIspostava" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NazivObveznika" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Adresa" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Država" Type="System.String" DbType="NChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Djelatnost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Telefon" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="e_mail" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="OblikVlasnistva" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VrstaObveze" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KorisnickoIme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Zaporka" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_sifarnikDjelatnosti_tbl_porezniObveznik" Member="tbl_sifarnikDjelatnosti" ThisKey="Djelatnost" OtherKey="sifraDjelatnosti" Type="tbl_sifarnikDjelatnosti" IsForeignKey="true" />
+      <Association Name="tbl_sifarnikIspostava_tbl_porezniObveznik" Member="tbl_sifarnikIspostava" ThisKey="PoreznaIspostava" OtherKey="sifraIspostave" Type="tbl_sifarnikIspostava" IsForeignKey="true" />
+      <Association Name="tbl_sifarnikObveze_tbl_porezniObveznik" Member="tbl_sifarnikObveze" ThisKey="VrstaObveze" OtherKey="sifraObveze" Type="tbl_sifarnikObveze" IsForeignKey="true" />
+      <Association Name="tbl_sifarnikPodrucnihUreda_tbl_porezniObveznik" Member="tbl_sifarnikPodrucnihUreda" ThisKey="PodrucniUredPU" OtherKey="sifraPodrucnogUreda" Type="tbl_sifarnikPodrucnihUreda" IsForeignKey="true" />
+      <Association Name="tbl_sifarnikVlasnistva_tbl_porezniObveznik" Member="tbl_sifarnikVlasnistva" ThisKey="OblikVlasnistva" OtherKey="sifraVlasnistva" Type="tbl_sifarnikVlasnistva" IsForeignKey="true" />
+      <Association Name="tbl_sifarnikZemlja_tbl_porezniObveznik" Member="tbl_sifarnikZemlja" ThisKey="Država" OtherKey="sifraZemlje" Type="tbl_sifarnikZemlja" IsForeignKey="true" />
+      <Association Name="tbl_sifarnikAktivnosti_tbl_porezniObveznik" Member="tbl_sifarnikAktivnosti" ThisKey="Status" OtherKey="sifraAktivnosti" Type="tbl_sifarnikAktivnosti" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_sifarnikAktivnosti" Member="tbl_sifarnikAktivnostis">
+    <Type Name="tbl_sifarnikAktivnosti">
+      <Column Name="sifraAktivnosti" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[opis aktivnosti]" Member="opis_aktivnosti" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_sifarnikAktivnosti_tbl_porezniObveznik" Member="tbl_porezniObvezniks" ThisKey="sifraAktivnosti" OtherKey="Status" Type="tbl_porezniObveznik" />
     </Type>
   </Table>
 </Database>

@@ -616,7 +616,7 @@ namespace VIES_SUSTAV {
                 this.columnVrstaObveze.AllowDBNull = false;
                 this.columnKorisnickoIme.MaxLength = 50;
                 this.columnZaporka.MaxLength = 20;
-                this.columnStatus.MaxLength = 15;
+                this.columnStatus.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

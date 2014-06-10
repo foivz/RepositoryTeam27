@@ -54,18 +54,22 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tblsifarnikAktivnostiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtPretrazivanjeOIB = new System.Windows.Forms.TextBox();
             this.lbl_OIB = new System.Windows.Forms.Label();
             this.btn_traziOIB = new System.Windows.Forms.Button();
             this.btn_poscisti = new System.Windows.Forms.Button();
             this.btn_prikaziSve = new System.Windows.Forms.Button();
             this.btn_unosNovogObveznika = new System.Windows.Forms.Button();
+            this.lbl_detaljniPregled = new System.Windows.Forms.Label();
+            this.tbl_sifarnikAktivnostiTableAdapter = new VIES_SUSTAV.ds_sifarnici_lookUpTableAdapters.tbl_sifarnikAktivnostiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ds_porezniObveznik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_porezniObveznikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PodrucnibindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_sifarnici_lookUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IspostavaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_porezniObveznikDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblsifarnikAktivnostiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_poreznaUprava
@@ -76,7 +80,7 @@
             this.lbl_poreznaUprava.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_poreznaUprava.Location = new System.Drawing.Point(0, 0);
             this.lbl_poreznaUprava.Name = "lbl_poreznaUprava";
-            this.lbl_poreznaUprava.Size = new System.Drawing.Size(1004, 33);
+            this.lbl_poreznaUprava.Size = new System.Drawing.Size(800, 33);
             this.lbl_poreznaUprava.TabIndex = 1;
             this.lbl_poreznaUprava.Text = "Ministarstvo financija - Porezna uprava";
             this.lbl_poreznaUprava.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,7 +93,7 @@
             this.lbl_porezniObveznik.ForeColor = System.Drawing.Color.Navy;
             this.lbl_porezniObveznik.Location = new System.Drawing.Point(0, 45);
             this.lbl_porezniObveznik.Name = "lbl_porezniObveznik";
-            this.lbl_porezniObveznik.Size = new System.Drawing.Size(1004, 22);
+            this.lbl_porezniObveznik.Size = new System.Drawing.Size(800, 22);
             this.lbl_porezniObveznik.TabIndex = 33;
             this.lbl_porezniObveznik.Text = "Registar VIES poreznih obveznika";
             this.lbl_porezniObveznik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,9 +155,9 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.tbl_porezniObveznikDataGridView.DataSource = this.tbl_porezniObveznikBindingSource;
-            this.tbl_porezniObveznikDataGridView.Location = new System.Drawing.Point(153, 218);
+            this.tbl_porezniObveznikDataGridView.Location = new System.Drawing.Point(70, 218);
             this.tbl_porezniObveznikDataGridView.Name = "tbl_porezniObveznikDataGridView";
-            this.tbl_porezniObveznikDataGridView.Size = new System.Drawing.Size(647, 338);
+            this.tbl_porezniObveznikDataGridView.Size = new System.Drawing.Size(696, 338);
             this.tbl_porezniObveznikDataGridView.TabIndex = 33;
             this.tbl_porezniObveznikDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_porezniObveznikDataGridView_CellDoubleClick);
             // 
@@ -165,6 +169,7 @@
             this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn1.HeaderText = "OIB";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn1.Width = 52;
             // 
             // dataGridViewTextBoxColumn4
@@ -219,6 +224,11 @@
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn3.ValueMember = "sifraIspostave";
             // 
+            // tblsifarnikAktivnostiBindingSource
+            // 
+            this.tblsifarnikAktivnostiBindingSource.DataMember = "tbl_sifarnikAktivnosti";
+            this.tblsifarnikAktivnostiBindingSource.DataSource = this.ds_sifarnici_lookUp;
+            // 
             // txtPretrazivanjeOIB
             // 
             this.txtPretrazivanjeOIB.BackColor = System.Drawing.Color.NavajoWhite;
@@ -264,7 +274,7 @@
             // btn_prikaziSve
             // 
             this.btn_prikaziSve.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_prikaziSve.Location = new System.Drawing.Point(685, 158);
+            this.btn_prikaziSve.Location = new System.Drawing.Point(651, 167);
             this.btn_prikaziSve.Name = "btn_prikaziSve";
             this.btn_prikaziSve.Size = new System.Drawing.Size(115, 45);
             this.btn_prikaziSve.TabIndex = 38;
@@ -276,7 +286,7 @@
             // 
             this.btn_unosNovogObveznika.BackColor = System.Drawing.Color.NavajoWhite;
             this.btn_unosNovogObveznika.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_unosNovogObveznika.Location = new System.Drawing.Point(875, 83);
+            this.btn_unosNovogObveznika.Location = new System.Drawing.Point(651, 92);
             this.btn_unosNovogObveznika.Name = "btn_unosNovogObveznika";
             this.btn_unosNovogObveznika.Size = new System.Drawing.Size(115, 55);
             this.btn_unosNovogObveznika.TabIndex = 39;
@@ -284,12 +294,28 @@
             this.btn_unosNovogObveznika.UseVisualStyleBackColor = false;
             this.btn_unosNovogObveznika.Click += new System.EventHandler(this.btn_unosNovogObveznika_Click);
             // 
+            // lbl_detaljniPregled
+            // 
+            this.lbl_detaljniPregled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_detaljniPregled.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_detaljniPregled.Location = new System.Drawing.Point(67, 185);
+            this.lbl_detaljniPregled.Name = "lbl_detaljniPregled";
+            this.lbl_detaljniPregled.Size = new System.Drawing.Size(173, 30);
+            this.lbl_detaljniPregled.TabIndex = 40;
+            this.lbl_detaljniPregled.Text = "Odabir za detaljni pregled: ";
+            this.lbl_detaljniPregled.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbl_sifarnikAktivnostiTableAdapter
+            // 
+            this.tbl_sifarnikAktivnostiTableAdapter.ClearBeforeFill = true;
+            // 
             // frn_registarVIES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1002, 610);
+            this.ClientSize = new System.Drawing.Size(797, 610);
+            this.Controls.Add(this.lbl_detaljniPregled);
             this.Controls.Add(this.btn_unosNovogObveznika);
             this.Controls.Add(this.btn_prikaziSve);
             this.Controls.Add(this.btn_poscisti);
@@ -312,6 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ds_sifarnici_lookUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IspostavaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_porezniObveznikDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblsifarnikAktivnostiBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,17 +358,20 @@
         private System.Windows.Forms.BindingSource IspostavaBindingSource;
         private ds_sifarnici_lookUpTableAdapters.tbl_sifarnikIspostavaTableAdapter tbl_sifarnikIspostavaTableAdapter;
         private System.Windows.Forms.DataGridView tbl_porezniObveznikDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.TextBox txtPretrazivanjeOIB;
         private System.Windows.Forms.Label lbl_OIB;
         private System.Windows.Forms.Button btn_traziOIB;
         private System.Windows.Forms.Button btn_poscisti;
         private System.Windows.Forms.Button btn_prikaziSve;
         private System.Windows.Forms.Button btn_unosNovogObveznika;
+        private System.Windows.Forms.Label lbl_detaljniPregled;
+        private System.Windows.Forms.BindingSource tblsifarnikAktivnostiBindingSource;
+        private ds_sifarnici_lookUpTableAdapters.tbl_sifarnikAktivnostiTableAdapter tbl_sifarnikAktivnostiTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
     }
 }

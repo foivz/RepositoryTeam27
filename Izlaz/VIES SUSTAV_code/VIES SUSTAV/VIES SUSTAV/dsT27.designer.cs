@@ -30,9 +30,6 @@ namespace VIES_SUSTAV
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void Inserttbl_porezniObveznik(tbl_porezniObveznik instance);
-    partial void Updatetbl_porezniObveznik(tbl_porezniObveznik instance);
-    partial void Deletetbl_porezniObveznik(tbl_porezniObveznik instance);
     partial void Inserttbl_sifarnikDjelatnosti(tbl_sifarnikDjelatnosti instance);
     partial void Updatetbl_sifarnikDjelatnosti(tbl_sifarnikDjelatnosti instance);
     partial void Deletetbl_sifarnikDjelatnosti(tbl_sifarnikDjelatnosti instance);
@@ -51,6 +48,12 @@ namespace VIES_SUSTAV
     partial void Inserttbl_sifarnikZemlja(tbl_sifarnikZemlja instance);
     partial void Updatetbl_sifarnikZemlja(tbl_sifarnikZemlja instance);
     partial void Deletetbl_sifarnikZemlja(tbl_sifarnikZemlja instance);
+    partial void Inserttbl_porezniObveznik(tbl_porezniObveznik instance);
+    partial void Updatetbl_porezniObveznik(tbl_porezniObveznik instance);
+    partial void Deletetbl_porezniObveznik(tbl_porezniObveznik instance);
+    partial void Inserttbl_sifarnikAktivnosti(tbl_sifarnikAktivnosti instance);
+    partial void Updatetbl_sifarnikAktivnosti(tbl_sifarnikAktivnosti instance);
+    partial void Deletetbl_sifarnikAktivnosti(tbl_sifarnikAktivnosti instance);
     #endregion
 		
 		public dsT27DataContext() : 
@@ -81,14 +84,6 @@ namespace VIES_SUSTAV
 				base(connection, mappingSource)
 		{
 			OnCreated();
-		}
-		
-		public System.Data.Linq.Table<tbl_porezniObveznik> tbl_porezniObvezniks
-		{
-			get
-			{
-				return this.GetTable<tbl_porezniObveznik>();
-			}
 		}
 		
 		public System.Data.Linq.Table<tbl_sifarnikDjelatnosti> tbl_sifarnikDjelatnostis
@@ -138,552 +133,20 @@ namespace VIES_SUSTAV
 				return this.GetTable<tbl_sifarnikZemlja>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_porezniObveznik")]
-	public partial class tbl_porezniObveznik : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _OIB;
-		
-		private int _PodrucniUredPU;
-		
-		private int _PoreznaIspostava;
-		
-		private string _NazivObveznika;
-		
-		private string _Adresa;
-		
-		private string _Država;
-		
-		private int _Djelatnost;
-		
-		private string _Telefon;
-		
-		private string _e_mail;
-		
-		private int _OblikVlasnistva;
-		
-		private int _VrstaObveze;
-		
-		private EntityRef<tbl_sifarnikDjelatnosti> _tbl_sifarnikDjelatnosti;
-		
-		private EntityRef<tbl_sifarnikIspostava> _tbl_sifarnikIspostava;
-		
-		private EntityRef<tbl_sifarnikObveze> _tbl_sifarnikObveze;
-		
-		private EntityRef<tbl_sifarnikPodrucnihUreda> _tbl_sifarnikPodrucnihUreda;
-		
-		private EntityRef<tbl_sifarnikVlasnistva> _tbl_sifarnikVlasnistva;
-		
-		private EntityRef<tbl_sifarnikZemlja> _tbl_sifarnikZemlja;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnOIBChanging(string value);
-    partial void OnOIBChanged();
-    partial void OnPodrucniUredPUChanging(int value);
-    partial void OnPodrucniUredPUChanged();
-    partial void OnPoreznaIspostavaChanging(int value);
-    partial void OnPoreznaIspostavaChanged();
-    partial void OnNazivObveznikaChanging(string value);
-    partial void OnNazivObveznikaChanged();
-    partial void OnAdresaChanging(string value);
-    partial void OnAdresaChanged();
-    partial void OnDržavaChanging(string value);
-    partial void OnDržavaChanged();
-    partial void OnDjelatnostChanging(int value);
-    partial void OnDjelatnostChanged();
-    partial void OnTelefonChanging(string value);
-    partial void OnTelefonChanged();
-    partial void One_mailChanging(string value);
-    partial void One_mailChanged();
-    partial void OnOblikVlasnistvaChanging(int value);
-    partial void OnOblikVlasnistvaChanged();
-    partial void OnVrstaObvezeChanging(int value);
-    partial void OnVrstaObvezeChanged();
-    #endregion
-		
-		public tbl_porezniObveznik()
-		{
-			this._tbl_sifarnikDjelatnosti = default(EntityRef<tbl_sifarnikDjelatnosti>);
-			this._tbl_sifarnikIspostava = default(EntityRef<tbl_sifarnikIspostava>);
-			this._tbl_sifarnikObveze = default(EntityRef<tbl_sifarnikObveze>);
-			this._tbl_sifarnikPodrucnihUreda = default(EntityRef<tbl_sifarnikPodrucnihUreda>);
-			this._tbl_sifarnikVlasnistva = default(EntityRef<tbl_sifarnikVlasnistva>);
-			this._tbl_sifarnikZemlja = default(EntityRef<tbl_sifarnikZemlja>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OIB", DbType="NChar(11) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string OIB
+		public System.Data.Linq.Table<tbl_porezniObveznik> tbl_porezniObvezniks
 		{
 			get
 			{
-				return this._OIB;
-			}
-			set
-			{
-				if ((this._OIB != value))
-				{
-					this.OnOIBChanging(value);
-					this.SendPropertyChanging();
-					this._OIB = value;
-					this.SendPropertyChanged("OIB");
-					this.OnOIBChanged();
-				}
+				return this.GetTable<tbl_porezniObveznik>();
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PodrucniUredPU", DbType="Int NOT NULL")]
-		public int PodrucniUredPU
+		public System.Data.Linq.Table<tbl_sifarnikAktivnosti> tbl_sifarnikAktivnostis
 		{
 			get
 			{
-				return this._PodrucniUredPU;
-			}
-			set
-			{
-				if ((this._PodrucniUredPU != value))
-				{
-					if (this._tbl_sifarnikPodrucnihUreda.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnPodrucniUredPUChanging(value);
-					this.SendPropertyChanging();
-					this._PodrucniUredPU = value;
-					this.SendPropertyChanged("PodrucniUredPU");
-					this.OnPodrucniUredPUChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PoreznaIspostava", DbType="Int NOT NULL")]
-		public int PoreznaIspostava
-		{
-			get
-			{
-				return this._PoreznaIspostava;
-			}
-			set
-			{
-				if ((this._PoreznaIspostava != value))
-				{
-					if (this._tbl_sifarnikIspostava.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnPoreznaIspostavaChanging(value);
-					this.SendPropertyChanging();
-					this._PoreznaIspostava = value;
-					this.SendPropertyChanged("PoreznaIspostava");
-					this.OnPoreznaIspostavaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NazivObveznika", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string NazivObveznika
-		{
-			get
-			{
-				return this._NazivObveznika;
-			}
-			set
-			{
-				if ((this._NazivObveznika != value))
-				{
-					this.OnNazivObveznikaChanging(value);
-					this.SendPropertyChanging();
-					this._NazivObveznika = value;
-					this.SendPropertyChanged("NazivObveznika");
-					this.OnNazivObveznikaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Adresa", DbType="NChar(100) NOT NULL", CanBeNull=false)]
-		public string Adresa
-		{
-			get
-			{
-				return this._Adresa;
-			}
-			set
-			{
-				if ((this._Adresa != value))
-				{
-					this.OnAdresaChanging(value);
-					this.SendPropertyChanging();
-					this._Adresa = value;
-					this.SendPropertyChanged("Adresa");
-					this.OnAdresaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Država", DbType="NChar(2) NOT NULL", CanBeNull=false)]
-		public string Država
-		{
-			get
-			{
-				return this._Država;
-			}
-			set
-			{
-				if ((this._Država != value))
-				{
-					if (this._tbl_sifarnikZemlja.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnDržavaChanging(value);
-					this.SendPropertyChanging();
-					this._Država = value;
-					this.SendPropertyChanged("Država");
-					this.OnDržavaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Djelatnost", DbType="Int NOT NULL")]
-		public int Djelatnost
-		{
-			get
-			{
-				return this._Djelatnost;
-			}
-			set
-			{
-				if ((this._Djelatnost != value))
-				{
-					if (this._tbl_sifarnikDjelatnosti.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnDjelatnostChanging(value);
-					this.SendPropertyChanging();
-					this._Djelatnost = value;
-					this.SendPropertyChanged("Djelatnost");
-					this.OnDjelatnostChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefon", DbType="NChar(50)")]
-		public string Telefon
-		{
-			get
-			{
-				return this._Telefon;
-			}
-			set
-			{
-				if ((this._Telefon != value))
-				{
-					this.OnTelefonChanging(value);
-					this.SendPropertyChanging();
-					this._Telefon = value;
-					this.SendPropertyChanged("Telefon");
-					this.OnTelefonChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_e_mail", DbType="NChar(50)")]
-		public string e_mail
-		{
-			get
-			{
-				return this._e_mail;
-			}
-			set
-			{
-				if ((this._e_mail != value))
-				{
-					this.One_mailChanging(value);
-					this.SendPropertyChanging();
-					this._e_mail = value;
-					this.SendPropertyChanged("e_mail");
-					this.One_mailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OblikVlasnistva", DbType="Int NOT NULL")]
-		public int OblikVlasnistva
-		{
-			get
-			{
-				return this._OblikVlasnistva;
-			}
-			set
-			{
-				if ((this._OblikVlasnistva != value))
-				{
-					if (this._tbl_sifarnikVlasnistva.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnOblikVlasnistvaChanging(value);
-					this.SendPropertyChanging();
-					this._OblikVlasnistva = value;
-					this.SendPropertyChanged("OblikVlasnistva");
-					this.OnOblikVlasnistvaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VrstaObveze", DbType="Int NOT NULL")]
-		public int VrstaObveze
-		{
-			get
-			{
-				return this._VrstaObveze;
-			}
-			set
-			{
-				if ((this._VrstaObveze != value))
-				{
-					if (this._tbl_sifarnikObveze.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnVrstaObvezeChanging(value);
-					this.SendPropertyChanging();
-					this._VrstaObveze = value;
-					this.SendPropertyChanged("VrstaObveze");
-					this.OnVrstaObvezeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikDjelatnosti_tbl_porezniObveznik", Storage="_tbl_sifarnikDjelatnosti", ThisKey="Djelatnost", OtherKey="sifraDjelatnosti", IsForeignKey=true)]
-		public tbl_sifarnikDjelatnosti tbl_sifarnikDjelatnosti
-		{
-			get
-			{
-				return this._tbl_sifarnikDjelatnosti.Entity;
-			}
-			set
-			{
-				tbl_sifarnikDjelatnosti previousValue = this._tbl_sifarnikDjelatnosti.Entity;
-				if (((previousValue != value) 
-							|| (this._tbl_sifarnikDjelatnosti.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tbl_sifarnikDjelatnosti.Entity = null;
-						previousValue.tbl_porezniObvezniks.Remove(this);
-					}
-					this._tbl_sifarnikDjelatnosti.Entity = value;
-					if ((value != null))
-					{
-						value.tbl_porezniObvezniks.Add(this);
-						this._Djelatnost = value.sifraDjelatnosti;
-					}
-					else
-					{
-						this._Djelatnost = default(int);
-					}
-					this.SendPropertyChanged("tbl_sifarnikDjelatnosti");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikIspostava_tbl_porezniObveznik", Storage="_tbl_sifarnikIspostava", ThisKey="PoreznaIspostava", OtherKey="sifraIspostave", IsForeignKey=true)]
-		public tbl_sifarnikIspostava tbl_sifarnikIspostava
-		{
-			get
-			{
-				return this._tbl_sifarnikIspostava.Entity;
-			}
-			set
-			{
-				tbl_sifarnikIspostava previousValue = this._tbl_sifarnikIspostava.Entity;
-				if (((previousValue != value) 
-							|| (this._tbl_sifarnikIspostava.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tbl_sifarnikIspostava.Entity = null;
-						previousValue.tbl_porezniObvezniks.Remove(this);
-					}
-					this._tbl_sifarnikIspostava.Entity = value;
-					if ((value != null))
-					{
-						value.tbl_porezniObvezniks.Add(this);
-						this._PoreznaIspostava = value.sifraIspostave;
-					}
-					else
-					{
-						this._PoreznaIspostava = default(int);
-					}
-					this.SendPropertyChanged("tbl_sifarnikIspostava");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikObveze_tbl_porezniObveznik", Storage="_tbl_sifarnikObveze", ThisKey="VrstaObveze", OtherKey="sifraObveze", IsForeignKey=true)]
-		public tbl_sifarnikObveze tbl_sifarnikObveze
-		{
-			get
-			{
-				return this._tbl_sifarnikObveze.Entity;
-			}
-			set
-			{
-				tbl_sifarnikObveze previousValue = this._tbl_sifarnikObveze.Entity;
-				if (((previousValue != value) 
-							|| (this._tbl_sifarnikObveze.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tbl_sifarnikObveze.Entity = null;
-						previousValue.tbl_porezniObvezniks.Remove(this);
-					}
-					this._tbl_sifarnikObveze.Entity = value;
-					if ((value != null))
-					{
-						value.tbl_porezniObvezniks.Add(this);
-						this._VrstaObveze = value.sifraObveze;
-					}
-					else
-					{
-						this._VrstaObveze = default(int);
-					}
-					this.SendPropertyChanged("tbl_sifarnikObveze");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikPodrucnihUreda_tbl_porezniObveznik", Storage="_tbl_sifarnikPodrucnihUreda", ThisKey="PodrucniUredPU", OtherKey="sifraPodrucnogUreda", IsForeignKey=true)]
-		public tbl_sifarnikPodrucnihUreda tbl_sifarnikPodrucnihUreda
-		{
-			get
-			{
-				return this._tbl_sifarnikPodrucnihUreda.Entity;
-			}
-			set
-			{
-				tbl_sifarnikPodrucnihUreda previousValue = this._tbl_sifarnikPodrucnihUreda.Entity;
-				if (((previousValue != value) 
-							|| (this._tbl_sifarnikPodrucnihUreda.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tbl_sifarnikPodrucnihUreda.Entity = null;
-						previousValue.tbl_porezniObvezniks.Remove(this);
-					}
-					this._tbl_sifarnikPodrucnihUreda.Entity = value;
-					if ((value != null))
-					{
-						value.tbl_porezniObvezniks.Add(this);
-						this._PodrucniUredPU = value.sifraPodrucnogUreda;
-					}
-					else
-					{
-						this._PodrucniUredPU = default(int);
-					}
-					this.SendPropertyChanged("tbl_sifarnikPodrucnihUreda");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikVlasnistva_tbl_porezniObveznik", Storage="_tbl_sifarnikVlasnistva", ThisKey="OblikVlasnistva", OtherKey="sifraVlasnistva", IsForeignKey=true)]
-		public tbl_sifarnikVlasnistva tbl_sifarnikVlasnistva
-		{
-			get
-			{
-				return this._tbl_sifarnikVlasnistva.Entity;
-			}
-			set
-			{
-				tbl_sifarnikVlasnistva previousValue = this._tbl_sifarnikVlasnistva.Entity;
-				if (((previousValue != value) 
-							|| (this._tbl_sifarnikVlasnistva.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tbl_sifarnikVlasnistva.Entity = null;
-						previousValue.tbl_porezniObvezniks.Remove(this);
-					}
-					this._tbl_sifarnikVlasnistva.Entity = value;
-					if ((value != null))
-					{
-						value.tbl_porezniObvezniks.Add(this);
-						this._OblikVlasnistva = value.sifraVlasnistva;
-					}
-					else
-					{
-						this._OblikVlasnistva = default(int);
-					}
-					this.SendPropertyChanged("tbl_sifarnikVlasnistva");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikZemlja_tbl_porezniObveznik", Storage="_tbl_sifarnikZemlja", ThisKey="Država", OtherKey="sifraZemlje", IsForeignKey=true)]
-		public tbl_sifarnikZemlja tbl_sifarnikZemlja
-		{
-			get
-			{
-				return this._tbl_sifarnikZemlja.Entity;
-			}
-			set
-			{
-				tbl_sifarnikZemlja previousValue = this._tbl_sifarnikZemlja.Entity;
-				if (((previousValue != value) 
-							|| (this._tbl_sifarnikZemlja.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tbl_sifarnikZemlja.Entity = null;
-						previousValue.tbl_porezniObvezniks.Remove(this);
-					}
-					this._tbl_sifarnikZemlja.Entity = value;
-					if ((value != null))
-					{
-						value.tbl_porezniObvezniks.Add(this);
-						this._Država = value.sifraZemlje;
-					}
-					else
-					{
-						this._Država = default(string);
-					}
-					this.SendPropertyChanged("tbl_sifarnikZemlja");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<tbl_sifarnikAktivnosti>();
 			}
 		}
 	}
@@ -1105,9 +568,9 @@ namespace VIES_SUSTAV
 		
 		private string _nazivPodrucnogUreda;
 		
-		private EntitySet<tbl_porezniObveznik> _tbl_porezniObvezniks;
-		
 		private EntitySet<tbl_sifarnikIspostava> _tbl_sifarnikIspostavas;
+		
+		private EntitySet<tbl_porezniObveznik> _tbl_porezniObvezniks;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1121,8 +584,8 @@ namespace VIES_SUSTAV
 		
 		public tbl_sifarnikPodrucnihUreda()
 		{
-			this._tbl_porezniObvezniks = new EntitySet<tbl_porezniObveznik>(new Action<tbl_porezniObveznik>(this.attach_tbl_porezniObvezniks), new Action<tbl_porezniObveznik>(this.detach_tbl_porezniObvezniks));
 			this._tbl_sifarnikIspostavas = new EntitySet<tbl_sifarnikIspostava>(new Action<tbl_sifarnikIspostava>(this.attach_tbl_sifarnikIspostavas), new Action<tbl_sifarnikIspostava>(this.detach_tbl_sifarnikIspostavas));
+			this._tbl_porezniObvezniks = new EntitySet<tbl_porezniObveznik>(new Action<tbl_porezniObveznik>(this.attach_tbl_porezniObvezniks), new Action<tbl_porezniObveznik>(this.detach_tbl_porezniObvezniks));
 			OnCreated();
 		}
 		
@@ -1166,19 +629,6 @@ namespace VIES_SUSTAV
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikPodrucnihUreda_tbl_porezniObveznik", Storage="_tbl_porezniObvezniks", ThisKey="sifraPodrucnogUreda", OtherKey="PodrucniUredPU")]
-		public EntitySet<tbl_porezniObveznik> tbl_porezniObvezniks
-		{
-			get
-			{
-				return this._tbl_porezniObvezniks;
-			}
-			set
-			{
-				this._tbl_porezniObvezniks.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikPodrucnihUreda_tbl_sifarnikIspostava", Storage="_tbl_sifarnikIspostavas", ThisKey="sifraPodrucnogUreda", OtherKey="sifraPodrucnogUreda")]
 		public EntitySet<tbl_sifarnikIspostava> tbl_sifarnikIspostavas
 		{
@@ -1189,6 +639,19 @@ namespace VIES_SUSTAV
 			set
 			{
 				this._tbl_sifarnikIspostavas.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikPodrucnihUreda_tbl_porezniObveznik", Storage="_tbl_porezniObvezniks", ThisKey="sifraPodrucnogUreda", OtherKey="PodrucniUredPU")]
+		public EntitySet<tbl_porezniObveznik> tbl_porezniObvezniks
+		{
+			get
+			{
+				return this._tbl_porezniObvezniks;
+			}
+			set
+			{
+				this._tbl_porezniObvezniks.Assign(value);
 			}
 		}
 		
@@ -1212,18 +675,6 @@ namespace VIES_SUSTAV
 			}
 		}
 		
-		private void attach_tbl_porezniObvezniks(tbl_porezniObveznik entity)
-		{
-			this.SendPropertyChanging();
-			entity.tbl_sifarnikPodrucnihUreda = this;
-		}
-		
-		private void detach_tbl_porezniObvezniks(tbl_porezniObveznik entity)
-		{
-			this.SendPropertyChanging();
-			entity.tbl_sifarnikPodrucnihUreda = null;
-		}
-		
 		private void attach_tbl_sifarnikIspostavas(tbl_sifarnikIspostava entity)
 		{
 			this.SendPropertyChanging();
@@ -1231,6 +682,18 @@ namespace VIES_SUSTAV
 		}
 		
 		private void detach_tbl_sifarnikIspostavas(tbl_sifarnikIspostava entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_sifarnikPodrucnihUreda = null;
+		}
+		
+		private void attach_tbl_porezniObvezniks(tbl_porezniObveznik entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_sifarnikPodrucnihUreda = this;
+		}
+		
+		private void detach_tbl_porezniObvezniks(tbl_porezniObveznik entity)
 		{
 			this.SendPropertyChanging();
 			entity.tbl_sifarnikPodrucnihUreda = null;
@@ -1462,6 +925,805 @@ namespace VIES_SUSTAV
 		{
 			this.SendPropertyChanging();
 			entity.tbl_sifarnikZemlja = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_porezniObveznik")]
+	public partial class tbl_porezniObveznik : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _OIB;
+		
+		private int _PodrucniUredPU;
+		
+		private int _PoreznaIspostava;
+		
+		private string _NazivObveznika;
+		
+		private string _Adresa;
+		
+		private string _Država;
+		
+		private int _Djelatnost;
+		
+		private string _Telefon;
+		
+		private string _e_mail;
+		
+		private int _OblikVlasnistva;
+		
+		private int _VrstaObveze;
+		
+		private string _KorisnickoIme;
+		
+		private string _Zaporka;
+		
+		private System.Nullable<System.DateTime> _Datum;
+		
+		private int _Status;
+		
+		private EntityRef<tbl_sifarnikDjelatnosti> _tbl_sifarnikDjelatnosti;
+		
+		private EntityRef<tbl_sifarnikIspostava> _tbl_sifarnikIspostava;
+		
+		private EntityRef<tbl_sifarnikObveze> _tbl_sifarnikObveze;
+		
+		private EntityRef<tbl_sifarnikPodrucnihUreda> _tbl_sifarnikPodrucnihUreda;
+		
+		private EntityRef<tbl_sifarnikVlasnistva> _tbl_sifarnikVlasnistva;
+		
+		private EntityRef<tbl_sifarnikZemlja> _tbl_sifarnikZemlja;
+		
+		private EntityRef<tbl_sifarnikAktivnosti> _tbl_sifarnikAktivnosti;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnOIBChanging(string value);
+    partial void OnOIBChanged();
+    partial void OnPodrucniUredPUChanging(int value);
+    partial void OnPodrucniUredPUChanged();
+    partial void OnPoreznaIspostavaChanging(int value);
+    partial void OnPoreznaIspostavaChanged();
+    partial void OnNazivObveznikaChanging(string value);
+    partial void OnNazivObveznikaChanged();
+    partial void OnAdresaChanging(string value);
+    partial void OnAdresaChanged();
+    partial void OnDržavaChanging(string value);
+    partial void OnDržavaChanged();
+    partial void OnDjelatnostChanging(int value);
+    partial void OnDjelatnostChanged();
+    partial void OnTelefonChanging(string value);
+    partial void OnTelefonChanged();
+    partial void One_mailChanging(string value);
+    partial void One_mailChanged();
+    partial void OnOblikVlasnistvaChanging(int value);
+    partial void OnOblikVlasnistvaChanged();
+    partial void OnVrstaObvezeChanging(int value);
+    partial void OnVrstaObvezeChanged();
+    partial void OnKorisnickoImeChanging(string value);
+    partial void OnKorisnickoImeChanged();
+    partial void OnZaporkaChanging(string value);
+    partial void OnZaporkaChanged();
+    partial void OnDatumChanging(System.Nullable<System.DateTime> value);
+    partial void OnDatumChanged();
+    partial void OnStatusChanging(int value);
+    partial void OnStatusChanged();
+    #endregion
+		
+		public tbl_porezniObveznik()
+		{
+			this._tbl_sifarnikDjelatnosti = default(EntityRef<tbl_sifarnikDjelatnosti>);
+			this._tbl_sifarnikIspostava = default(EntityRef<tbl_sifarnikIspostava>);
+			this._tbl_sifarnikObveze = default(EntityRef<tbl_sifarnikObveze>);
+			this._tbl_sifarnikPodrucnihUreda = default(EntityRef<tbl_sifarnikPodrucnihUreda>);
+			this._tbl_sifarnikVlasnistva = default(EntityRef<tbl_sifarnikVlasnistva>);
+			this._tbl_sifarnikZemlja = default(EntityRef<tbl_sifarnikZemlja>);
+			this._tbl_sifarnikAktivnosti = default(EntityRef<tbl_sifarnikAktivnosti>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OIB", DbType="NChar(11) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string OIB
+		{
+			get
+			{
+				return this._OIB;
+			}
+			set
+			{
+				if ((this._OIB != value))
+				{
+					this.OnOIBChanging(value);
+					this.SendPropertyChanging();
+					this._OIB = value;
+					this.SendPropertyChanged("OIB");
+					this.OnOIBChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PodrucniUredPU", DbType="Int NOT NULL")]
+		public int PodrucniUredPU
+		{
+			get
+			{
+				return this._PodrucniUredPU;
+			}
+			set
+			{
+				if ((this._PodrucniUredPU != value))
+				{
+					if (this._tbl_sifarnikPodrucnihUreda.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnPodrucniUredPUChanging(value);
+					this.SendPropertyChanging();
+					this._PodrucniUredPU = value;
+					this.SendPropertyChanged("PodrucniUredPU");
+					this.OnPodrucniUredPUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PoreznaIspostava", DbType="Int NOT NULL")]
+		public int PoreznaIspostava
+		{
+			get
+			{
+				return this._PoreznaIspostava;
+			}
+			set
+			{
+				if ((this._PoreznaIspostava != value))
+				{
+					if (this._tbl_sifarnikIspostava.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnPoreznaIspostavaChanging(value);
+					this.SendPropertyChanging();
+					this._PoreznaIspostava = value;
+					this.SendPropertyChanged("PoreznaIspostava");
+					this.OnPoreznaIspostavaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NazivObveznika", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string NazivObveznika
+		{
+			get
+			{
+				return this._NazivObveznika;
+			}
+			set
+			{
+				if ((this._NazivObveznika != value))
+				{
+					this.OnNazivObveznikaChanging(value);
+					this.SendPropertyChanging();
+					this._NazivObveznika = value;
+					this.SendPropertyChanged("NazivObveznika");
+					this.OnNazivObveznikaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Adresa", DbType="NChar(100) NOT NULL", CanBeNull=false)]
+		public string Adresa
+		{
+			get
+			{
+				return this._Adresa;
+			}
+			set
+			{
+				if ((this._Adresa != value))
+				{
+					this.OnAdresaChanging(value);
+					this.SendPropertyChanging();
+					this._Adresa = value;
+					this.SendPropertyChanged("Adresa");
+					this.OnAdresaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Država", DbType="NChar(2) NOT NULL", CanBeNull=false)]
+		public string Država
+		{
+			get
+			{
+				return this._Država;
+			}
+			set
+			{
+				if ((this._Država != value))
+				{
+					if (this._tbl_sifarnikZemlja.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDržavaChanging(value);
+					this.SendPropertyChanging();
+					this._Država = value;
+					this.SendPropertyChanged("Država");
+					this.OnDržavaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Djelatnost", DbType="Int NOT NULL")]
+		public int Djelatnost
+		{
+			get
+			{
+				return this._Djelatnost;
+			}
+			set
+			{
+				if ((this._Djelatnost != value))
+				{
+					if (this._tbl_sifarnikDjelatnosti.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDjelatnostChanging(value);
+					this.SendPropertyChanging();
+					this._Djelatnost = value;
+					this.SendPropertyChanged("Djelatnost");
+					this.OnDjelatnostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefon", DbType="NChar(50)")]
+		public string Telefon
+		{
+			get
+			{
+				return this._Telefon;
+			}
+			set
+			{
+				if ((this._Telefon != value))
+				{
+					this.OnTelefonChanging(value);
+					this.SendPropertyChanging();
+					this._Telefon = value;
+					this.SendPropertyChanged("Telefon");
+					this.OnTelefonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_e_mail", DbType="NChar(50)")]
+		public string e_mail
+		{
+			get
+			{
+				return this._e_mail;
+			}
+			set
+			{
+				if ((this._e_mail != value))
+				{
+					this.One_mailChanging(value);
+					this.SendPropertyChanging();
+					this._e_mail = value;
+					this.SendPropertyChanged("e_mail");
+					this.One_mailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OblikVlasnistva", DbType="Int NOT NULL")]
+		public int OblikVlasnistva
+		{
+			get
+			{
+				return this._OblikVlasnistva;
+			}
+			set
+			{
+				if ((this._OblikVlasnistva != value))
+				{
+					if (this._tbl_sifarnikVlasnistva.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnOblikVlasnistvaChanging(value);
+					this.SendPropertyChanging();
+					this._OblikVlasnistva = value;
+					this.SendPropertyChanged("OblikVlasnistva");
+					this.OnOblikVlasnistvaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VrstaObveze", DbType="Int NOT NULL")]
+		public int VrstaObveze
+		{
+			get
+			{
+				return this._VrstaObveze;
+			}
+			set
+			{
+				if ((this._VrstaObveze != value))
+				{
+					if (this._tbl_sifarnikObveze.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnVrstaObvezeChanging(value);
+					this.SendPropertyChanging();
+					this._VrstaObveze = value;
+					this.SendPropertyChanged("VrstaObveze");
+					this.OnVrstaObvezeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KorisnickoIme", DbType="VarChar(50)")]
+		public string KorisnickoIme
+		{
+			get
+			{
+				return this._KorisnickoIme;
+			}
+			set
+			{
+				if ((this._KorisnickoIme != value))
+				{
+					this.OnKorisnickoImeChanging(value);
+					this.SendPropertyChanging();
+					this._KorisnickoIme = value;
+					this.SendPropertyChanged("KorisnickoIme");
+					this.OnKorisnickoImeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Zaporka", DbType="NChar(20)")]
+		public string Zaporka
+		{
+			get
+			{
+				return this._Zaporka;
+			}
+			set
+			{
+				if ((this._Zaporka != value))
+				{
+					this.OnZaporkaChanging(value);
+					this.SendPropertyChanging();
+					this._Zaporka = value;
+					this.SendPropertyChanged("Zaporka");
+					this.OnZaporkaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Datum", DbType="Date")]
+		public System.Nullable<System.DateTime> Datum
+		{
+			get
+			{
+				return this._Datum;
+			}
+			set
+			{
+				if ((this._Datum != value))
+				{
+					this.OnDatumChanging(value);
+					this.SendPropertyChanging();
+					this._Datum = value;
+					this.SendPropertyChanged("Datum");
+					this.OnDatumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Int NOT NULL")]
+		public int Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					if (this._tbl_sifarnikAktivnosti.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikDjelatnosti_tbl_porezniObveznik", Storage="_tbl_sifarnikDjelatnosti", ThisKey="Djelatnost", OtherKey="sifraDjelatnosti", IsForeignKey=true)]
+		public tbl_sifarnikDjelatnosti tbl_sifarnikDjelatnosti
+		{
+			get
+			{
+				return this._tbl_sifarnikDjelatnosti.Entity;
+			}
+			set
+			{
+				tbl_sifarnikDjelatnosti previousValue = this._tbl_sifarnikDjelatnosti.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_sifarnikDjelatnosti.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_sifarnikDjelatnosti.Entity = null;
+						previousValue.tbl_porezniObvezniks.Remove(this);
+					}
+					this._tbl_sifarnikDjelatnosti.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_porezniObvezniks.Add(this);
+						this._Djelatnost = value.sifraDjelatnosti;
+					}
+					else
+					{
+						this._Djelatnost = default(int);
+					}
+					this.SendPropertyChanged("tbl_sifarnikDjelatnosti");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikIspostava_tbl_porezniObveznik", Storage="_tbl_sifarnikIspostava", ThisKey="PoreznaIspostava", OtherKey="sifraIspostave", IsForeignKey=true)]
+		public tbl_sifarnikIspostava tbl_sifarnikIspostava
+		{
+			get
+			{
+				return this._tbl_sifarnikIspostava.Entity;
+			}
+			set
+			{
+				tbl_sifarnikIspostava previousValue = this._tbl_sifarnikIspostava.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_sifarnikIspostava.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_sifarnikIspostava.Entity = null;
+						previousValue.tbl_porezniObvezniks.Remove(this);
+					}
+					this._tbl_sifarnikIspostava.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_porezniObvezniks.Add(this);
+						this._PoreznaIspostava = value.sifraIspostave;
+					}
+					else
+					{
+						this._PoreznaIspostava = default(int);
+					}
+					this.SendPropertyChanged("tbl_sifarnikIspostava");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikObveze_tbl_porezniObveznik", Storage="_tbl_sifarnikObveze", ThisKey="VrstaObveze", OtherKey="sifraObveze", IsForeignKey=true)]
+		public tbl_sifarnikObveze tbl_sifarnikObveze
+		{
+			get
+			{
+				return this._tbl_sifarnikObveze.Entity;
+			}
+			set
+			{
+				tbl_sifarnikObveze previousValue = this._tbl_sifarnikObveze.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_sifarnikObveze.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_sifarnikObveze.Entity = null;
+						previousValue.tbl_porezniObvezniks.Remove(this);
+					}
+					this._tbl_sifarnikObveze.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_porezniObvezniks.Add(this);
+						this._VrstaObveze = value.sifraObveze;
+					}
+					else
+					{
+						this._VrstaObveze = default(int);
+					}
+					this.SendPropertyChanged("tbl_sifarnikObveze");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikPodrucnihUreda_tbl_porezniObveznik", Storage="_tbl_sifarnikPodrucnihUreda", ThisKey="PodrucniUredPU", OtherKey="sifraPodrucnogUreda", IsForeignKey=true)]
+		public tbl_sifarnikPodrucnihUreda tbl_sifarnikPodrucnihUreda
+		{
+			get
+			{
+				return this._tbl_sifarnikPodrucnihUreda.Entity;
+			}
+			set
+			{
+				tbl_sifarnikPodrucnihUreda previousValue = this._tbl_sifarnikPodrucnihUreda.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_sifarnikPodrucnihUreda.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_sifarnikPodrucnihUreda.Entity = null;
+						previousValue.tbl_porezniObvezniks.Remove(this);
+					}
+					this._tbl_sifarnikPodrucnihUreda.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_porezniObvezniks.Add(this);
+						this._PodrucniUredPU = value.sifraPodrucnogUreda;
+					}
+					else
+					{
+						this._PodrucniUredPU = default(int);
+					}
+					this.SendPropertyChanged("tbl_sifarnikPodrucnihUreda");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikVlasnistva_tbl_porezniObveznik", Storage="_tbl_sifarnikVlasnistva", ThisKey="OblikVlasnistva", OtherKey="sifraVlasnistva", IsForeignKey=true)]
+		public tbl_sifarnikVlasnistva tbl_sifarnikVlasnistva
+		{
+			get
+			{
+				return this._tbl_sifarnikVlasnistva.Entity;
+			}
+			set
+			{
+				tbl_sifarnikVlasnistva previousValue = this._tbl_sifarnikVlasnistva.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_sifarnikVlasnistva.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_sifarnikVlasnistva.Entity = null;
+						previousValue.tbl_porezniObvezniks.Remove(this);
+					}
+					this._tbl_sifarnikVlasnistva.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_porezniObvezniks.Add(this);
+						this._OblikVlasnistva = value.sifraVlasnistva;
+					}
+					else
+					{
+						this._OblikVlasnistva = default(int);
+					}
+					this.SendPropertyChanged("tbl_sifarnikVlasnistva");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikZemlja_tbl_porezniObveznik", Storage="_tbl_sifarnikZemlja", ThisKey="Država", OtherKey="sifraZemlje", IsForeignKey=true)]
+		public tbl_sifarnikZemlja tbl_sifarnikZemlja
+		{
+			get
+			{
+				return this._tbl_sifarnikZemlja.Entity;
+			}
+			set
+			{
+				tbl_sifarnikZemlja previousValue = this._tbl_sifarnikZemlja.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_sifarnikZemlja.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_sifarnikZemlja.Entity = null;
+						previousValue.tbl_porezniObvezniks.Remove(this);
+					}
+					this._tbl_sifarnikZemlja.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_porezniObvezniks.Add(this);
+						this._Država = value.sifraZemlje;
+					}
+					else
+					{
+						this._Država = default(string);
+					}
+					this.SendPropertyChanged("tbl_sifarnikZemlja");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikAktivnosti_tbl_porezniObveznik", Storage="_tbl_sifarnikAktivnosti", ThisKey="Status", OtherKey="sifraAktivnosti", IsForeignKey=true)]
+		public tbl_sifarnikAktivnosti tbl_sifarnikAktivnosti
+		{
+			get
+			{
+				return this._tbl_sifarnikAktivnosti.Entity;
+			}
+			set
+			{
+				tbl_sifarnikAktivnosti previousValue = this._tbl_sifarnikAktivnosti.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_sifarnikAktivnosti.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_sifarnikAktivnosti.Entity = null;
+						previousValue.tbl_porezniObvezniks.Remove(this);
+					}
+					this._tbl_sifarnikAktivnosti.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_porezniObvezniks.Add(this);
+						this._Status = value.sifraAktivnosti;
+					}
+					else
+					{
+						this._Status = default(int);
+					}
+					this.SendPropertyChanged("tbl_sifarnikAktivnosti");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_sifarnikAktivnosti")]
+	public partial class tbl_sifarnikAktivnosti : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _sifraAktivnosti;
+		
+		private string _opis_aktivnosti;
+		
+		private EntitySet<tbl_porezniObveznik> _tbl_porezniObvezniks;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnsifraAktivnostiChanging(int value);
+    partial void OnsifraAktivnostiChanged();
+    partial void Onopis_aktivnostiChanging(string value);
+    partial void Onopis_aktivnostiChanged();
+    #endregion
+		
+		public tbl_sifarnikAktivnosti()
+		{
+			this._tbl_porezniObvezniks = new EntitySet<tbl_porezniObveznik>(new Action<tbl_porezniObveznik>(this.attach_tbl_porezniObvezniks), new Action<tbl_porezniObveznik>(this.detach_tbl_porezniObvezniks));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sifraAktivnosti", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int sifraAktivnosti
+		{
+			get
+			{
+				return this._sifraAktivnosti;
+			}
+			set
+			{
+				if ((this._sifraAktivnosti != value))
+				{
+					this.OnsifraAktivnostiChanging(value);
+					this.SendPropertyChanging();
+					this._sifraAktivnosti = value;
+					this.SendPropertyChanged("sifraAktivnosti");
+					this.OnsifraAktivnostiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[opis aktivnosti]", Storage="_opis_aktivnosti", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string opis_aktivnosti
+		{
+			get
+			{
+				return this._opis_aktivnosti;
+			}
+			set
+			{
+				if ((this._opis_aktivnosti != value))
+				{
+					this.Onopis_aktivnostiChanging(value);
+					this.SendPropertyChanging();
+					this._opis_aktivnosti = value;
+					this.SendPropertyChanged("opis_aktivnosti");
+					this.Onopis_aktivnostiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_sifarnikAktivnosti_tbl_porezniObveznik", Storage="_tbl_porezniObvezniks", ThisKey="sifraAktivnosti", OtherKey="Status")]
+		public EntitySet<tbl_porezniObveznik> tbl_porezniObvezniks
+		{
+			get
+			{
+				return this._tbl_porezniObvezniks;
+			}
+			set
+			{
+				this._tbl_porezniObvezniks.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_tbl_porezniObvezniks(tbl_porezniObveznik entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_sifarnikAktivnosti = this;
+		}
+		
+		private void detach_tbl_porezniObvezniks(tbl_porezniObveznik entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_sifarnikAktivnosti = null;
 		}
 	}
 }

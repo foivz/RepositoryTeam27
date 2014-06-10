@@ -26,6 +26,8 @@ namespace VIES_SUSTAV.ViesForms
 
         private void frn_registarVIES_Load(object sender, EventArgs e)
         {
+           
+            this.tbl_sifarnikAktivnostiTableAdapter.Fill(this.ds_sifarnici_lookUp.tbl_sifarnikAktivnosti);
             
             this.tbl_sifarnikIspostavaTableAdapter.Fill(this.ds_sifarnici_lookUp.tbl_sifarnikIspostava);
             
@@ -61,7 +63,7 @@ namespace VIES_SUSTAV.ViesForms
 
                     else 
                     {
-
+                        this.tbl_porezniObveznikDataGridView.DataSource = this.ds_porezniObveznik.tbl_porezniObveznik;
                         this.tbl_porezniObveznikTableAdapter.FillByOIB(this.ds_porezniObveznik.tbl_porezniObveznik, OIB);
 
                         int brojRedova = int.Parse(tbl_porezniObveznikDataGridView.RowCount.ToString());
@@ -80,19 +82,27 @@ namespace VIES_SUSTAV.ViesForms
                 }
         }
 
-        // odustajem
-        private void txtPretrazivanjeOIB_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
+      
         private void button1_Click(object sender, EventArgs e)
         {
-            txtPretrazivanjeOIB.Clear();
+            try
+            {
+                txtPretrazivanjeOIB.Clear();
+                this.tbl_porezniObveznikDataGridView.DataSource = null;
+                this.tbl_porezniObveznikDataGridView.Refresh();
+            }
+
+            catch (System.Exception excep)
+            {
+
+                MessageBox.Show(excep.Message);
+
+            }
         }
 
         private void btn_prikaziSve_Click(object sender, EventArgs e)
         {
+            this.tbl_porezniObveznikDataGridView.DataSource = this.ds_porezniObveznik.tbl_porezniObveznik;
             this.tbl_porezniObveznikTableAdapter.Fill(this.ds_porezniObveznik.tbl_porezniObveznik);
         }
 
@@ -110,12 +120,10 @@ namespace VIES_SUSTAV.ViesForms
             {
                 if (e.RowIndex > -1)
                 {
-                    var ID = tbl_porezniObveznikDataGridView.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
-                    string OIB = tbl_porezniObveznikDataGridView.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                    string OIB = tbl_porezniObveznikDataGridView.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
 
-                    frm_detaljniPodaciObveznika noviDetaljniPodaci = new frm_detaljniPodaciObveznika();
-
-                    noviDetaljniPodaci.Show();
+                    frm_detaljniPregled noviDetaljniPregled = new frm_detaljniPregled(OIB);
+                    noviDetaljniPregled.Show();
                 }
             }
 
@@ -127,5 +135,7 @@ namespace VIES_SUSTAV.ViesForms
             }
            
         }
+
+       
     }
 }

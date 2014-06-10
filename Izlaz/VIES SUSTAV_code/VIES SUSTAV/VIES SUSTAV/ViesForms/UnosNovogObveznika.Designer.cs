@@ -46,9 +46,7 @@
             System.Windows.Forms.Label lbl_status;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_unosNovogObveznika));
             this.ds_porezniObveznik = new VIES_SUSTAV.ds_porezniObveznik();
-            this.tbl_porezniObveznikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_porezniObveznikTableAdapter = new VIES_SUSTAV.ds_porezniObveznikTableAdapters.tbl_porezniObveznikTableAdapter();
-            this.tableAdapterManager = new VIES_SUSTAV.ds_porezniObveznikTableAdapters.TableAdapterManager();
             this.dt_datumDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.PodrucnibindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ds_sifarnici_lookUp = new VIES_SUSTAV.ds_sifarnici_lookUp();
@@ -90,6 +88,11 @@
             this.btn_SpremiPorObv = new System.Windows.Forms.Button();
             this.btm_dodajNovi = new System.Windows.Forms.Button();
             this.btn_zatvori = new System.Windows.Forms.Button();
+            this.tblsifarnikAktivnostiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_sifarnikAktivnostiTableAdapter = new VIES_SUSTAV.ds_sifarnici_lookUpTableAdapters.tbl_sifarnikAktivnostiTableAdapter();
+            this.txt_aktivnost = new System.Windows.Forms.TextBox();
+            this.tbl_porezniObveznikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new VIES_SUSTAV.ds_porezniObveznikTableAdapters.TableAdapterManager();
             lbl_oIBLabel = new System.Windows.Forms.Label();
             lbl_podrucniUred = new System.Windows.Forms.Label();
             lbl_poreznaIspostava = new System.Windows.Forms.Label();
@@ -106,7 +109,6 @@
             lbl_datum = new System.Windows.Forms.Label();
             lbl_status = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds_porezniObveznik)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_porezniObveznikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PodrucnibindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_sifarnici_lookUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IspostavebindingSource)).BeginInit();
@@ -114,6 +116,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DjelatnostbindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VlasnistvobindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ObvezabindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblsifarnikAktivnostiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_porezniObveznikBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_oIBLabel
@@ -270,26 +274,26 @@
             lbl_datum.TabIndex = 28;
             lbl_datum.Text = "Datum:";
             // 
+            // lbl_status
+            // 
+            lbl_status.AutoSize = true;
+            lbl_status.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lbl_status.ForeColor = System.Drawing.Color.Navy;
+            lbl_status.Location = new System.Drawing.Point(12, 621);
+            lbl_status.Name = "lbl_status";
+            lbl_status.Size = new System.Drawing.Size(52, 14);
+            lbl_status.TabIndex = 57;
+            lbl_status.Text = "Status:";
+           
+            // 
             // ds_porezniObveznik
             // 
             this.ds_porezniObveznik.DataSetName = "ds_porezniObveznik";
             this.ds_porezniObveznik.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tbl_porezniObveznikBindingSource
-            // 
-            this.tbl_porezniObveznikBindingSource.DataMember = "tbl_porezniObveznik";
-            this.tbl_porezniObveznikBindingSource.DataSource = this.ds_porezniObveznik;
-            this.tbl_porezniObveznikBindingSource.CurrentChanged += new System.EventHandler(this.tbl_porezniObveznikBindingSource_CurrentChanged);
-            // 
             // tbl_porezniObveznikTableAdapter
             // 
             this.tbl_porezniObveznikTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.tbl_porezniObveznikTableAdapter = this.tbl_porezniObveznikTableAdapter;
-            this.tableAdapterManager.UpdateOrder = VIES_SUSTAV.ds_porezniObveznikTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // dt_datumDateTimePicker
             // 
@@ -466,9 +470,8 @@
             this.txt_OIB.Name = "txt_OIB";
             this.txt_OIB.Size = new System.Drawing.Size(301, 22);
             this.txt_OIB.TabIndex = 45;
-            this.txt_OIB.TextChanged += new System.EventHandler(this.txt_OIB_TextChanged);
             this.txt_OIB.Leave += new System.EventHandler(this.txt_OIB_Leave);
-            this.txt_OIB.Validating += new System.ComponentModel.CancelEventHandler(this.txt_OIB_Validating);
+            
             // 
             // txt_nazivObveznika
             // 
@@ -516,7 +519,7 @@
             this.txt_telefon.Name = "txt_telefon";
             this.txt_telefon.Size = new System.Drawing.Size(304, 22);
             this.txt_telefon.TabIndex = 51;
-            this.txt_telefon.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+          
             // 
             // txt_eMail
             // 
@@ -581,32 +584,21 @@
             this.txt_Zaporka.Size = new System.Drawing.Size(174, 22);
             this.txt_Zaporka.TabIndex = 56;
             // 
-            // lbl_status
-            // 
-            lbl_status.AutoSize = true;
-            lbl_status.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lbl_status.ForeColor = System.Drawing.Color.Navy;
-            lbl_status.Location = new System.Drawing.Point(12, 621);
-            lbl_status.Name = "lbl_status";
-            lbl_status.Size = new System.Drawing.Size(52, 14);
-            lbl_status.TabIndex = 57;
-            lbl_status.Text = "Status:";
-            lbl_status.Click += new System.EventHandler(this.label3_Click);
-            // 
             // cbox_aktivnost
             // 
             this.cbox_aktivnost.BackColor = System.Drawing.Color.FloralWhite;
+            this.cbox_aktivnost.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tbl_porezniObveznikBindingSource, "Status", true));
+            this.cbox_aktivnost.DataSource = this.tblsifarnikAktivnostiBindingSource;
+            this.cbox_aktivnost.DisplayMember = "opis aktivnosti";
             this.cbox_aktivnost.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbox_aktivnost.ForeColor = System.Drawing.Color.Crimson;
             this.cbox_aktivnost.FormattingEnabled = true;
-            this.cbox_aktivnost.Items.AddRange(new object[] {
-            "AKTIVAN",
-            "NIJE AKTIVAN"});
             this.cbox_aktivnost.Location = new System.Drawing.Point(118, 621);
             this.cbox_aktivnost.Name = "cbox_aktivnost";
-            this.cbox_aktivnost.Size = new System.Drawing.Size(174, 22);
+            this.cbox_aktivnost.Size = new System.Drawing.Size(122, 22);
             this.cbox_aktivnost.TabIndex = 58;
-            this.cbox_aktivnost.SelectedIndexChanged += new System.EventHandler(this.cbox_aktivnost_SelectedIndexChanged);
+            this.cbox_aktivnost.ValueMember = "sifraAktivnosti";
+          
             // 
             // txt_podrucni
             // 
@@ -682,7 +674,7 @@
             this.txt_status.Size = new System.Drawing.Size(71, 15);
             this.txt_status.TabIndex = 64;
             this.txt_status.Visible = false;
-            this.txt_status.TextChanged += new System.EventHandler(this.txt_status_TextChanged);
+            
             // 
             // btn_SpremiPorObv
             // 
@@ -720,12 +712,47 @@
             this.btn_zatvori.UseVisualStyleBackColor = false;
             this.btn_zatvori.Click += new System.EventHandler(this.btn_zatvori_Click);
             // 
+            // tblsifarnikAktivnostiBindingSource
+            // 
+            this.tblsifarnikAktivnostiBindingSource.DataMember = "tbl_sifarnikAktivnosti";
+            this.tblsifarnikAktivnostiBindingSource.DataSource = this.ds_sifarnici_lookUp;
+            // 
+            // tbl_sifarnikAktivnostiTableAdapter
+            // 
+            this.tbl_sifarnikAktivnostiTableAdapter.ClearBeforeFill = true;
+            // 
+            // txt_aktivnost
+            // 
+            this.txt_aktivnost.BackColor = System.Drawing.Color.Gainsboro;
+            this.txt_aktivnost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblsifarnikAktivnostiBindingSource, "sifraAktivnosti", true));
+            this.txt_aktivnost.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_aktivnost.ForeColor = System.Drawing.Color.Orange;
+            this.txt_aktivnost.Location = new System.Drawing.Point(244, 621);
+            this.txt_aktivnost.Name = "txt_aktivnost";
+            this.txt_aktivnost.Size = new System.Drawing.Size(48, 22);
+            this.txt_aktivnost.TabIndex = 68;
+            this.txt_aktivnost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbl_porezniObveznikBindingSource
+            // 
+            this.tbl_porezniObveznikBindingSource.DataMember = "tbl_porezniObveznik";
+            this.tbl_porezniObveznikBindingSource.DataSource = this.ds_porezniObveznik;
+            this.tbl_porezniObveznikBindingSource.CurrentChanged += new System.EventHandler(this.tbl_porezniObveznikBindingSource_CurrentChanged);
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.tbl_porezniObveznikTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = VIES_SUSTAV.ds_porezniObveznikTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // frm_unosNovogObveznika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(592, 666);
+            this.Controls.Add(this.txt_aktivnost);
             this.Controls.Add(this.btn_zatvori);
             this.Controls.Add(this.btm_dodajNovi);
             this.Controls.Add(this.btn_SpremiPorObv);
@@ -778,7 +805,6 @@
             this.Text = "NOVI POREZNI OBVEZNIK";
             this.Load += new System.EventHandler(this.frm_UnosNovogObveznika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ds_porezniObveznik)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_porezniObveznikBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PodrucnibindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_sifarnici_lookUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IspostavebindingSource)).EndInit();
@@ -786,6 +812,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DjelatnostbindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VlasnistvobindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ObvezabindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblsifarnikAktivnostiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_porezniObveznikBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -838,5 +866,8 @@
         private System.Windows.Forms.Button btn_SpremiPorObv;
         private System.Windows.Forms.Button btm_dodajNovi;
         private System.Windows.Forms.Button btn_zatvori;
+        private System.Windows.Forms.BindingSource tblsifarnikAktivnostiBindingSource;
+        private ds_sifarnici_lookUpTableAdapters.tbl_sifarnikAktivnostiTableAdapter tbl_sifarnikAktivnostiTableAdapter;
+        private System.Windows.Forms.TextBox txt_aktivnost;
     }
 }

@@ -36,6 +36,8 @@ namespace VIES_SUSTAV {
         
         private tbl_sifarnikZemljaDataTable tabletbl_sifarnikZemlja;
         
+        private tbl_sifarnikAktivnostiDataTable tabletbl_sifarnikAktivnosti;
+        
         private global::System.Data.DataRelation relationFK_tbl_sifarnikIspostava_tbl_sifarnikPodrucnihUreda;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -83,6 +85,9 @@ namespace VIES_SUSTAV {
                 }
                 if ((ds.Tables["tbl_sifarnikZemlja"] != null)) {
                     base.Tables.Add(new tbl_sifarnikZemljaDataTable(ds.Tables["tbl_sifarnikZemlja"]));
+                }
+                if ((ds.Tables["tbl_sifarnikAktivnosti"] != null)) {
+                    base.Tables.Add(new tbl_sifarnikAktivnostiDataTable(ds.Tables["tbl_sifarnikAktivnosti"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -159,6 +164,16 @@ namespace VIES_SUSTAV {
         public tbl_sifarnikZemljaDataTable tbl_sifarnikZemlja {
             get {
                 return this.tabletbl_sifarnikZemlja;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public tbl_sifarnikAktivnostiDataTable tbl_sifarnikAktivnosti {
+            get {
+                return this.tabletbl_sifarnikAktivnosti;
             }
         }
         
@@ -247,6 +262,9 @@ namespace VIES_SUSTAV {
                 if ((ds.Tables["tbl_sifarnikZemlja"] != null)) {
                     base.Tables.Add(new tbl_sifarnikZemljaDataTable(ds.Tables["tbl_sifarnikZemlja"]));
                 }
+                if ((ds.Tables["tbl_sifarnikAktivnosti"] != null)) {
+                    base.Tables.Add(new tbl_sifarnikAktivnostiDataTable(ds.Tables["tbl_sifarnikAktivnosti"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -316,6 +334,12 @@ namespace VIES_SUSTAV {
                     this.tabletbl_sifarnikZemlja.InitVars();
                 }
             }
+            this.tabletbl_sifarnikAktivnosti = ((tbl_sifarnikAktivnostiDataTable)(base.Tables["tbl_sifarnikAktivnosti"]));
+            if ((initTable == true)) {
+                if ((this.tabletbl_sifarnikAktivnosti != null)) {
+                    this.tabletbl_sifarnikAktivnosti.InitVars();
+                }
+            }
             this.relationFK_tbl_sifarnikIspostava_tbl_sifarnikPodrucnihUreda = this.Relations["FK_tbl_sifarnikIspostava_tbl_sifarnikPodrucnihUreda"];
         }
         
@@ -339,6 +363,8 @@ namespace VIES_SUSTAV {
             base.Tables.Add(this.tabletbl_sifarnikVlasnistva);
             this.tabletbl_sifarnikZemlja = new tbl_sifarnikZemljaDataTable();
             base.Tables.Add(this.tabletbl_sifarnikZemlja);
+            this.tabletbl_sifarnikAktivnosti = new tbl_sifarnikAktivnostiDataTable();
+            base.Tables.Add(this.tabletbl_sifarnikAktivnosti);
             this.relationFK_tbl_sifarnikIspostava_tbl_sifarnikPodrucnihUreda = new global::System.Data.DataRelation("FK_tbl_sifarnikIspostava_tbl_sifarnikPodrucnihUreda", new global::System.Data.DataColumn[] {
                         this.tabletbl_sifarnikPodrucnihUreda.sifraPodrucnogUredaColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_sifarnikIspostava.sifraPodrucnogUredaColumn}, false);
@@ -378,6 +404,12 @@ namespace VIES_SUSTAV {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializetbl_sifarnikZemlja() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializetbl_sifarnikAktivnosti() {
             return false;
         }
         
@@ -453,6 +485,9 @@ namespace VIES_SUSTAV {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void tbl_sifarnikZemljaRowChangeEventHandler(object sender, tbl_sifarnikZemljaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void tbl_sifarnikAktivnostiRowChangeEventHandler(object sender, tbl_sifarnikAktivnostiRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2134,6 +2169,280 @@ namespace VIES_SUSTAV {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class tbl_sifarnikAktivnostiDataTable : global::System.Data.TypedTableBase<tbl_sifarnikAktivnostiRow> {
+            
+            private global::System.Data.DataColumn columnsifraAktivnosti;
+            
+            private global::System.Data.DataColumn columnopis_aktivnosti;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_sifarnikAktivnostiDataTable() {
+                this.TableName = "tbl_sifarnikAktivnosti";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal tbl_sifarnikAktivnostiDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected tbl_sifarnikAktivnostiDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn sifraAktivnostiColumn {
+                get {
+                    return this.columnsifraAktivnosti;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn opis_aktivnostiColumn {
+                get {
+                    return this.columnopis_aktivnosti;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_sifarnikAktivnostiRow this[int index] {
+                get {
+                    return ((tbl_sifarnikAktivnostiRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_sifarnikAktivnostiRowChangeEventHandler tbl_sifarnikAktivnostiRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_sifarnikAktivnostiRowChangeEventHandler tbl_sifarnikAktivnostiRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_sifarnikAktivnostiRowChangeEventHandler tbl_sifarnikAktivnostiRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_sifarnikAktivnostiRowChangeEventHandler tbl_sifarnikAktivnostiRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addtbl_sifarnikAktivnostiRow(tbl_sifarnikAktivnostiRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_sifarnikAktivnostiRow Addtbl_sifarnikAktivnostiRow(int sifraAktivnosti, string opis_aktivnosti) {
+                tbl_sifarnikAktivnostiRow rowtbl_sifarnikAktivnostiRow = ((tbl_sifarnikAktivnostiRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        sifraAktivnosti,
+                        opis_aktivnosti};
+                rowtbl_sifarnikAktivnostiRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbl_sifarnikAktivnostiRow);
+                return rowtbl_sifarnikAktivnostiRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_sifarnikAktivnostiRow FindBysifraAktivnosti(int sifraAktivnosti) {
+                return ((tbl_sifarnikAktivnostiRow)(this.Rows.Find(new object[] {
+                            sifraAktivnosti})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                tbl_sifarnikAktivnostiDataTable cln = ((tbl_sifarnikAktivnostiDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new tbl_sifarnikAktivnostiDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnsifraAktivnosti = base.Columns["sifraAktivnosti"];
+                this.columnopis_aktivnosti = base.Columns["opis aktivnosti"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnsifraAktivnosti = new global::System.Data.DataColumn("sifraAktivnosti", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsifraAktivnosti);
+                this.columnopis_aktivnosti = new global::System.Data.DataColumn("opis aktivnosti", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnopis_aktivnosti);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnsifraAktivnosti}, true));
+                this.columnsifraAktivnosti.AllowDBNull = false;
+                this.columnsifraAktivnosti.Unique = true;
+                this.columnopis_aktivnosti.AllowDBNull = false;
+                this.columnopis_aktivnosti.MaxLength = 20;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_sifarnikAktivnostiRow Newtbl_sifarnikAktivnostiRow() {
+                return ((tbl_sifarnikAktivnostiRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new tbl_sifarnikAktivnostiRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(tbl_sifarnikAktivnostiRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.tbl_sifarnikAktivnostiRowChanged != null)) {
+                    this.tbl_sifarnikAktivnostiRowChanged(this, new tbl_sifarnikAktivnostiRowChangeEvent(((tbl_sifarnikAktivnostiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.tbl_sifarnikAktivnostiRowChanging != null)) {
+                    this.tbl_sifarnikAktivnostiRowChanging(this, new tbl_sifarnikAktivnostiRowChangeEvent(((tbl_sifarnikAktivnostiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.tbl_sifarnikAktivnostiRowDeleted != null)) {
+                    this.tbl_sifarnikAktivnostiRowDeleted(this, new tbl_sifarnikAktivnostiRowChangeEvent(((tbl_sifarnikAktivnostiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.tbl_sifarnikAktivnostiRowDeleting != null)) {
+                    this.tbl_sifarnikAktivnostiRowDeleting(this, new tbl_sifarnikAktivnostiRowChangeEvent(((tbl_sifarnikAktivnostiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removetbl_sifarnikAktivnostiRow(tbl_sifarnikAktivnostiRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_sifarnici_lookUp ds = new ds_sifarnici_lookUp();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "tbl_sifarnikAktivnostiDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class tbl_sifarnikDjelatnostiRow : global::System.Data.DataRow {
@@ -2389,6 +2698,43 @@ namespace VIES_SUSTAV {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class tbl_sifarnikAktivnostiRow : global::System.Data.DataRow {
+            
+            private tbl_sifarnikAktivnostiDataTable tabletbl_sifarnikAktivnosti;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal tbl_sifarnikAktivnostiRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabletbl_sifarnikAktivnosti = ((tbl_sifarnikAktivnostiDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int sifraAktivnosti {
+                get {
+                    return ((int)(this[this.tabletbl_sifarnikAktivnosti.sifraAktivnostiColumn]));
+                }
+                set {
+                    this[this.tabletbl_sifarnikAktivnosti.sifraAktivnostiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string opis_aktivnosti {
+                get {
+                    return ((string)(this[this.tabletbl_sifarnikAktivnosti.opis_aktivnostiColumn]));
+                }
+                set {
+                    this[this.tabletbl_sifarnikAktivnosti.opis_aktivnostiColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2578,6 +2924,40 @@ namespace VIES_SUSTAV {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tbl_sifarnikZemljaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class tbl_sifarnikAktivnostiRowChangeEvent : global::System.EventArgs {
+            
+            private tbl_sifarnikAktivnostiRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_sifarnikAktivnostiRowChangeEvent(tbl_sifarnikAktivnostiRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_sifarnikAktivnostiRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4574,6 +4954,326 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class tbl_sifarnikAktivnostiTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public tbl_sifarnikAktivnostiTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "tbl_sifarnikAktivnosti";
+            tableMapping.ColumnMappings.Add("sifraAktivnosti", "sifraAktivnosti");
+            tableMapping.ColumnMappings.Add("opis aktivnosti", "opis aktivnosti");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_sifarnikAktivnosti] WHERE (([sifraAktivnosti] = @Original_" +
+                "sifraAktivnosti) AND ([opis aktivnosti] = @Original_opis_aktivnosti))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sifraAktivnosti", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sifraAktivnosti", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_opis_aktivnosti", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "opis aktivnosti", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_sifarnikAktivnosti] ([sifraAktivnosti], [opis aktivnosti])" +
+                " VALUES (@sifraAktivnosti, @opis_aktivnosti);\r\nSELECT sifraAktivnosti, [opis akt" +
+                "ivnosti] FROM tbl_sifarnikAktivnosti WHERE (sifraAktivnosti = @sifraAktivnosti)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sifraAktivnosti", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sifraAktivnosti", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@opis_aktivnosti", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "opis aktivnosti", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_sifarnikAktivnosti] SET [sifraAktivnosti] = @sifraAktivnosti, [opis aktivnosti] = @opis_aktivnosti WHERE (([sifraAktivnosti] = @Original_sifraAktivnosti) AND ([opis aktivnosti] = @Original_opis_aktivnosti));
+SELECT sifraAktivnosti, [opis aktivnosti] FROM tbl_sifarnikAktivnosti WHERE (sifraAktivnosti = @sifraAktivnosti)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sifraAktivnosti", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sifraAktivnosti", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@opis_aktivnosti", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "opis aktivnosti", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sifraAktivnosti", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sifraAktivnosti", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_opis_aktivnosti", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "opis aktivnosti", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::VIES_SUSTAV.Properties.Settings.Default.T27_DBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT sifraAktivnosti, [opis aktivnosti] FROM dbo.tbl_sifarnikAktivnosti";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_sifarnici_lookUp.tbl_sifarnikAktivnostiDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_sifarnici_lookUp.tbl_sifarnikAktivnostiDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_sifarnici_lookUp.tbl_sifarnikAktivnostiDataTable dataTable = new ds_sifarnici_lookUp.tbl_sifarnikAktivnostiDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_sifarnici_lookUp.tbl_sifarnikAktivnostiDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_sifarnici_lookUp dataSet) {
+            return this.Adapter.Update(dataSet, "tbl_sifarnikAktivnosti");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_sifraAktivnosti, string Original_opis_aktivnosti) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_sifraAktivnosti));
+            if ((Original_opis_aktivnosti == null)) {
+                throw new global::System.ArgumentNullException("Original_opis_aktivnosti");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_opis_aktivnosti));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int sifraAktivnosti, string opis_aktivnosti) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(sifraAktivnosti));
+            if ((opis_aktivnosti == null)) {
+                throw new global::System.ArgumentNullException("opis_aktivnosti");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(opis_aktivnosti));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int sifraAktivnosti, string opis_aktivnosti, int Original_sifraAktivnosti, string Original_opis_aktivnosti) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(sifraAktivnosti));
+            if ((opis_aktivnosti == null)) {
+                throw new global::System.ArgumentNullException("opis_aktivnosti");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(opis_aktivnosti));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_sifraAktivnosti));
+            if ((Original_opis_aktivnosti == null)) {
+                throw new global::System.ArgumentNullException("Original_opis_aktivnosti");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_opis_aktivnosti));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string opis_aktivnosti, int Original_sifraAktivnosti, string Original_opis_aktivnosti) {
+            return this.Update(Original_sifraAktivnosti, opis_aktivnosti, Original_sifraAktivnosti, Original_opis_aktivnosti);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4596,6 +5296,8 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
         private tbl_sifarnikVlasnistvaTableAdapter _tbl_sifarnikVlasnistvaTableAdapter;
         
         private tbl_sifarnikZemljaTableAdapter _tbl_sifarnikZemljaTableAdapter;
+        
+        private tbl_sifarnikAktivnostiTableAdapter _tbl_sifarnikAktivnostiTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -4698,6 +5400,20 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public tbl_sifarnikAktivnostiTableAdapter tbl_sifarnikAktivnostiTableAdapter {
+            get {
+                return this._tbl_sifarnikAktivnostiTableAdapter;
+            }
+            set {
+                this._tbl_sifarnikAktivnostiTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -4739,6 +5455,10 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                             && (this._tbl_sifarnikZemljaTableAdapter.Connection != null))) {
                     return this._tbl_sifarnikZemljaTableAdapter.Connection;
                 }
+                if (((this._tbl_sifarnikAktivnostiTableAdapter != null) 
+                            && (this._tbl_sifarnikAktivnostiTableAdapter.Connection != null))) {
+                    return this._tbl_sifarnikAktivnostiTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -4770,6 +5490,9 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                 if ((this._tbl_sifarnikZemljaTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._tbl_sifarnikAktivnostiTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -4790,15 +5513,6 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_sifarnikZemljaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tbl_sifarnikZemlja.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_sifarnikZemljaTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._tbl_sifarnikVlasnistvaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tbl_sifarnikVlasnistva.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -4808,12 +5522,21 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_sifarnikDjelatnostiTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tbl_sifarnikDjelatnosti.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_sifarnikZemljaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbl_sifarnikZemlja.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_sifarnikDjelatnostiTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_sifarnikZemljaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tbl_sifarnikAktivnostiTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbl_sifarnikAktivnosti.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_sifarnikAktivnostiTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4835,6 +5558,15 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._tbl_sifarnikDjelatnostiTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbl_sifarnikDjelatnosti.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_sifarnikDjelatnostiTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -4853,14 +5585,6 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_sifarnikZemljaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tbl_sifarnikZemlja.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_sifarnikZemljaTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._tbl_sifarnikVlasnistvaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tbl_sifarnikVlasnistva.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -4869,11 +5593,19 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_sifarnikDjelatnostiTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tbl_sifarnikDjelatnosti.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_sifarnikZemljaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbl_sifarnikZemlja.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_sifarnikDjelatnostiTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_sifarnikZemljaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tbl_sifarnikAktivnostiTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbl_sifarnikAktivnosti.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_sifarnikAktivnostiTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4893,6 +5625,14 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._tbl_sifarnikDjelatnostiTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbl_sifarnikDjelatnosti.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_sifarnikDjelatnostiTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -4903,6 +5643,14 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(ds_sifarnici_lookUp dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._tbl_sifarnikDjelatnostiTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbl_sifarnikDjelatnosti.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_sifarnikDjelatnostiTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._tbl_sifarnikObvezeTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tbl_sifarnikObveze.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -4919,19 +5667,11 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_sifarnikDjelatnostiTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tbl_sifarnikDjelatnosti.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_sifarnikAktivnostiTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbl_sifarnikAktivnosti.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_sifarnikDjelatnostiTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tbl_sifarnikVlasnistvaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tbl_sifarnikVlasnistva.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_sifarnikVlasnistvaTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_sifarnikAktivnostiTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -4940,6 +5680,14 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tbl_sifarnikZemljaTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tbl_sifarnikVlasnistvaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbl_sifarnikVlasnistva.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_sifarnikVlasnistvaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -5017,6 +5765,11 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
             }
             if (((this._tbl_sifarnikZemljaTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._tbl_sifarnikZemljaTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._tbl_sifarnikAktivnostiTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tbl_sifarnikAktivnostiTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -5106,6 +5859,15 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_sifarnikZemljaTableAdapter.Adapter);
                     }
                 }
+                if ((this._tbl_sifarnikAktivnostiTableAdapter != null)) {
+                    revertConnections.Add(this._tbl_sifarnikAktivnostiTableAdapter, this._tbl_sifarnikAktivnostiTableAdapter.Connection);
+                    this._tbl_sifarnikAktivnostiTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tbl_sifarnikAktivnostiTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tbl_sifarnikAktivnostiTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tbl_sifarnikAktivnostiTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_sifarnikAktivnostiTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -5187,6 +5949,10 @@ SELECT sifraZemlje, nazivZemlje FROM tbl_sifarnikZemlja WHERE (sifraZemlje = @si
                 if ((this._tbl_sifarnikZemljaTableAdapter != null)) {
                     this._tbl_sifarnikZemljaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_sifarnikZemljaTableAdapter]));
                     this._tbl_sifarnikZemljaTableAdapter.Transaction = null;
+                }
+                if ((this._tbl_sifarnikAktivnostiTableAdapter != null)) {
+                    this._tbl_sifarnikAktivnostiTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_sifarnikAktivnostiTableAdapter]));
+                    this._tbl_sifarnikAktivnostiTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
