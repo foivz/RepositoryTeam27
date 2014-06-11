@@ -40,6 +40,10 @@
             this.ms_registarPoreznihObveznika = new System.Windows.Forms.ToolStripMenuItem();
             this.mi_registarVIESNovo = new System.Windows.Forms.ToolStripMenuItem();
             this.mi_unosNovogObveznikaNovo = new System.Windows.Forms.ToolStripMenuItem();
+            this.ms_ViesRegistar = new System.Windows.Forms.ToolStripMenuItem();
+            this.mi_pretraživanjePregledVIES = new System.Windows.Forms.ToolStripMenuItem();
+            this.mi_unosVIES = new System.Windows.Forms.ToolStripMenuItem();
+            this.mi_kontroleVIES = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_Osnovni.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +53,8 @@
             this.ms_Osnovni.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ms_Osnovni.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ms_Sifarnici,
-            this.ms_registarPoreznihObveznika});
+            this.ms_registarPoreznihObveznika,
+            this.ms_ViesRegistar});
             this.ms_Osnovni.Location = new System.Drawing.Point(0, 0);
             this.ms_Osnovni.Name = "ms_Osnovni";
             this.ms_Osnovni.Size = new System.Drawing.Size(1012, 24);
@@ -134,6 +139,35 @@
             this.mi_unosNovogObveznikaNovo.Text = "Unos novog obveznika";
             this.mi_unosNovogObveznikaNovo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mi_unosNovogObveznikaNovo_MouseUp);
             // 
+            // ms_ViesRegistar
+            // 
+            this.ms_ViesRegistar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mi_pretraživanjePregledVIES,
+            this.mi_unosVIES,
+            this.mi_kontroleVIES});
+            this.ms_ViesRegistar.Name = "ms_ViesRegistar";
+            this.ms_ViesRegistar.Size = new System.Drawing.Size(221, 20);
+            this.ms_ViesRegistar.Text = "Registar VIES poreznih podataka";
+            // 
+            // mi_pretraživanjePregledVIES
+            // 
+            this.mi_pretraživanjePregledVIES.Name = "mi_pretraživanjePregledVIES";
+            this.mi_pretraživanjePregledVIES.Size = new System.Drawing.Size(306, 22);
+            this.mi_pretraživanjePregledVIES.Text = "Pretraživanje i pregled VIES registra";
+            // 
+            // mi_unosVIES
+            // 
+            this.mi_unosVIES.Name = "mi_unosVIES";
+            this.mi_unosVIES.Size = new System.Drawing.Size(306, 22);
+            this.mi_unosVIES.Text = "Unos novog VIES izvještaja";
+            this.mi_unosVIES.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mi_unosVIES_MouseUp);
+            // 
+            // mi_kontroleVIES
+            // 
+            this.mi_kontroleVIES.Name = "mi_kontroleVIES";
+            this.mi_kontroleVIES.Size = new System.Drawing.Size(306, 22);
+            this.mi_kontroleVIES.Text = "Kontrole VIES poreznih podataka";
+            // 
             // frm_Osnovna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,6 +200,10 @@
         private System.Windows.Forms.ToolStripMenuItem ms_registarPoreznihObveznika;
         private System.Windows.Forms.ToolStripMenuItem mi_registarVIESNovo;
         private System.Windows.Forms.ToolStripMenuItem mi_unosNovogObveznikaNovo;
+        private System.Windows.Forms.ToolStripMenuItem ms_ViesRegistar;
+        private System.Windows.Forms.ToolStripMenuItem mi_pretraživanjePregledVIES;
+        private System.Windows.Forms.ToolStripMenuItem mi_unosVIES;
+        private System.Windows.Forms.ToolStripMenuItem mi_kontroleVIES;
     }
 }
 

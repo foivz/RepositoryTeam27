@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_T27.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ds_ViesUnos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_ViesUnos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,32 +120,41 @@
     <Compile Include="SifarniciForms\sifarnikZemalja.Designer.cs">
       <DependentUpon>sifarnikZemalja.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViesForms\Detaljni pregled.cs">
+    <Compile Include="PorezniObveznikForms\Detaljni pregled.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViesForms\Detaljni pregled.Designer.cs">
+    <Compile Include="PorezniObveznikForms\Detaljni pregled.Designer.cs">
       <DependentUpon>Detaljni pregled.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViesForms\Registar VIES poreznih obveznika.cs">
+    <Compile Include="PorezniObveznikForms\Registar VIES poreznih obveznika.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViesForms\Registar VIES poreznih obveznika.Designer.cs">
+    <Compile Include="PorezniObveznikForms\Registar VIES poreznih obveznika.Designer.cs">
       <DependentUpon>Registar VIES poreznih obveznika.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViesForms\UnosNovogObveznika.cs">
+    <Compile Include="PorezniObveznikForms\UnosNovogObveznika.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViesForms\UnosNovogObveznika.Designer.cs">
+    <Compile Include="PorezniObveznikForms\UnosNovogObveznika.Designer.cs">
       <DependentUpon>UnosNovogObveznika.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ViesForms\Detaljni pregled.resx">
+    <Compile Include="VIESForms\Unos VIES izvještaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIESForms\Unos VIES izvještaja.Designer.cs">
+      <DependentUpon>Unos VIES izvještaja.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PorezniObveznikForms\Detaljni pregled.resx">
       <DependentUpon>Detaljni pregled.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViesForms\Registar VIES poreznih obveznika.resx">
+    <EmbeddedResource Include="PorezniObveznikForms\Registar VIES poreznih obveznika.resx">
       <DependentUpon>Registar VIES poreznih obveznika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViesForms\UnosNovogObveznika.resx">
+    <EmbeddedResource Include="PorezniObveznikForms\UnosNovogObveznika.resx">
       <DependentUpon>UnosNovogObveznika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIESForms\Unos VIES izvještaja.resx">
+      <DependentUpon>Unos VIES izvještaja.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="dsT27.dbml.layout">
       <DependentUpon>dsT27.dbml</DependentUpon>
@@ -214,6 +228,17 @@
     </None>
     <None Include="ds_T27.xss">
       <DependentUpon>ds_T27.xsd</DependentUpon>
+    </None>
+    <None Include="ds_ViesUnos.xsc">
+      <DependentUpon>ds_ViesUnos.xsd</DependentUpon>
+    </None>
+    <None Include="ds_ViesUnos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_ViesUnos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_ViesUnos.xss">
+      <DependentUpon>ds_ViesUnos.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

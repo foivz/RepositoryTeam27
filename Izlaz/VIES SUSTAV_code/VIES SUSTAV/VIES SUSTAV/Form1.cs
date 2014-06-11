@@ -114,6 +114,16 @@ namespace VIES_SUSTAV
             noviObveznik.WindowState = FormWindowState.Normal;
             noviObveznik.Show();
         }
+
+        private void mi_unosVIES_MouseUp(object sender, MouseEventArgs e)
+        {
+            VIESForms.frm_UnosVIES noviVIESunos =
+                new VIESForms.frm_UnosVIES();
+            noviVIESunos.MdiParent = this;
+            noviVIESunos.WindowState = FormWindowState.Normal;
+            noviVIESunos.Show();
+
+        }
         
 
        
