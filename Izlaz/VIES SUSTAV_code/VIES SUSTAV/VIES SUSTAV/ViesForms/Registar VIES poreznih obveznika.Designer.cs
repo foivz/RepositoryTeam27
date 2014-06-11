@@ -237,7 +237,7 @@
             this.txtPretrazivanjeOIB.Name = "txtPretrazivanjeOIB";
             this.txtPretrazivanjeOIB.Size = new System.Drawing.Size(152, 22);
             this.txtPretrazivanjeOIB.TabIndex = 34;
-            this.txtPretrazivanjeOIB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPretrazivanjeOIB_KeyPress);
+          
             // 
             // lbl_OIB
             // 
