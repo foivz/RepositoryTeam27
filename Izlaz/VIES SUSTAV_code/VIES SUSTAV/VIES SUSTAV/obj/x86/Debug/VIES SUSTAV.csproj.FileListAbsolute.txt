@@ -37,3 +37,6 @@ C:\Documents and Settings\Lidija.LIDIJA-PC\My Documents\GitHub\RepositoryTeam27\
 C:\Documents and Settings\Lidija.LIDIJA-PC\My Documents\GitHub\RepositoryTeam27\Izlaz\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Documents and Settings\Lidija.LIDIJA-PC\My Documents\GitHub\RepositoryTeam27\Izlaz\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Documents and Settings\Lidija.LIDIJA-PC\My Documents\GitHub\RepositoryTeam27\Izlaz\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.VIESForms.frm_UnosVIES.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\My Documents\GitHub\RepositoryTeam27\Izlaz\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.VIESForms.frm_PregledPdvS.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\My Documents\GitHub\RepositoryTeam27\Izlaz\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.VIESForms.frm_unosPdvS.resources
+C:\Documents and Settings\Lidija.LIDIJA-PC\My Documents\GitHub\RepositoryTeam27\Izlaz\VIES SUSTAV_code\VIES SUSTAV\VIES SUSTAV\obj\x86\Debug\VIES_SUSTAV.VIESForms.frm_ProvjeraPDV_S.resources

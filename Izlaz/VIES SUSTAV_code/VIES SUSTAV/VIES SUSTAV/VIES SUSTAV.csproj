@@ -52,6 +52,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsT27.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ds_PdvS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_PdvS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ds_porezniObveznik.cs">
       <DependentUpon>ds_porezniObveznik.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -138,6 +143,24 @@
     <Compile Include="PorezniObveznikForms\UnosNovogObveznika.Designer.cs">
       <DependentUpon>UnosNovogObveznika.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIESForms\PregledPdvS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIESForms\PregledPdvS.Designer.cs">
+      <DependentUpon>PregledPdvS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIESForms\Provjera PDV-S izvještaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIESForms\Provjera PDV-S izvještaja.Designer.cs">
+      <DependentUpon>Provjera PDV-S izvještaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIESForms\Unos PDV-S izvještaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIESForms\Unos PDV-S izvještaja.Designer.cs">
+      <DependentUpon>Unos PDV-S izvještaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIESForms\Unos VIES izvještaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +175,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PorezniObveznikForms\UnosNovogObveznika.resx">
       <DependentUpon>UnosNovogObveznika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIESForms\PregledPdvS.resx">
+      <DependentUpon>PregledPdvS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIESForms\Provjera PDV-S izvještaja.resx">
+      <DependentUpon>Provjera PDV-S izvještaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIESForms\Unos PDV-S izvještaja.resx">
+      <DependentUpon>Unos PDV-S izvještaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIESForms\Unos VIES izvještaja.resx">
       <DependentUpon>Unos VIES izvještaja.cs</DependentUpon>
@@ -195,6 +227,17 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>dsT27.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_PdvS.xsc">
+      <DependentUpon>ds_PdvS.xsd</DependentUpon>
+    </None>
+    <None Include="ds_PdvS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_PdvS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_PdvS.xss">
+      <DependentUpon>ds_PdvS.xsd</DependentUpon>
     </None>
     <None Include="ds_porezniObveznik.xsc">
       <DependentUpon>ds_porezniObveznik.xsd</DependentUpon>
@@ -258,6 +301,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\alert1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

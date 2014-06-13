@@ -12216,7 +12216,7 @@ FROM         tbl_porezniObveznik INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT     tbl_porezniObveznik.OIB, tbl_porezniObveznik.NazivObveznika, tbl_porezniObveznik.Adresa, tbl_sifarnikIspostava.nazivIspostave, 
@@ -12226,6 +12226,17 @@ FROM         tbl_porezniObveznik INNER JOIN
                       tbl_sifarnikPodrucnihUreda ON tbl_porezniObveznik.PodrucniUredPU = tbl_sifarnikPodrucnihUreda.sifraPodrucnogUreda AND 
                       tbl_sifarnikIspostava.sifraPodrucnogUreda = tbl_sifarnikPodrucnihUreda.sifraPodrucnogUreda";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT     tbl_porezniObveznik.OIB, tbl_porezniObveznik.NazivObveznika, tbl_porezniObveznik.Adresa, tbl_sifarnikIspostava.nazivIspostave, 
+                      tbl_sifarnikPodrucnihUreda.nazivPodrucnogUreda
+FROM         tbl_porezniObveznik INNER JOIN
+                      tbl_sifarnikIspostava ON tbl_porezniObveznik.PoreznaIspostava = tbl_sifarnikIspostava.sifraIspostave INNER JOIN
+                      tbl_sifarnikPodrucnihUreda ON tbl_porezniObveznik.PodrucniUredPU = tbl_sifarnikPodrucnihUreda.sifraPodrucnogUreda AND 
+                      tbl_sifarnikIspostava.sifraPodrucnogUreda = tbl_sifarnikPodrucnihUreda.sifraPodrucnogUreda
+WHERE     (tbl_porezniObveznik.OIB = @OIB)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OIB", global::System.Data.SqlDbType.NChar, 11, global::System.Data.ParameterDirection.Input, 0, 0, "OIB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12247,6 +12258,42 @@ FROM         tbl_porezniObveznik INNER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ds_T27.tbl_ObveznikLookUpDataTable GetDataObveznik() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_T27.tbl_ObveznikLookUpDataTable dataTable = new ds_T27.tbl_ObveznikLookUpDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByOIB(ds_T27.tbl_ObveznikLookUpDataTable dataTable, string OIB) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((OIB == null)) {
+                throw new global::System.ArgumentNullException("OIB");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OIB));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ds_T27.tbl_ObveznikLookUpDataTable GetDataByOIB(string OIB) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((OIB == null)) {
+                throw new global::System.ArgumentNullException("OIB");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OIB));
+            }
             ds_T27.tbl_ObveznikLookUpDataTable dataTable = new ds_T27.tbl_ObveznikLookUpDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
