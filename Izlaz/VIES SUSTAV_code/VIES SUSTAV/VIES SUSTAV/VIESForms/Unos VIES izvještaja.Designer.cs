@@ -55,7 +55,7 @@
             this.txt_ispostava = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_spremanjeOIB = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbox_OIB = new System.Windows.Forms.ComboBox();
             this.txt_adresa = new System.Windows.Forms.TextBox();
             this.txt_naziv = new System.Windows.Forms.TextBox();
             this.txt_OIB = new System.Windows.Forms.TextBox();
@@ -93,6 +93,10 @@
             this.ctxt_zadnjiID = new System.Windows.Forms.TextBox();
             this.pbx_pdvsDodan = new System.Windows.Forms.PictureBox();
             this.lbl_pdvsDodan = new System.Windows.Forms.Label();
+            this.pbox_provjera = new System.Windows.Forms.PictureBox();
+            this.lbl_provjeraPdvS = new System.Windows.Forms.Label();
+            this.lbl_ZPdodan = new System.Windows.Forms.Label();
+            this.btn_zatvori = new System.Windows.Forms.Button();
             oIBLabel = new System.Windows.Forms.Label();
             razdoblje_izvještavanjaLabel = new System.Windows.Forms.Label();
             vrijednost_stjecanjaLabel = new System.Windows.Forms.Label();
@@ -127,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbl_VIESizvjestajBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getIDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_pdvsDodan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox_provjera)).BeginInit();
             this.SuspendLayout();
             // 
             // oIBLabel
@@ -244,6 +249,7 @@
             lbl_stariID.Size = new System.Drawing.Size(82, 14);
             lbl_stariID.TabIndex = 72;
             lbl_stariID.Text = "PrethodniID";
+            lbl_stariID.Visible = false;
             // 
             // lbl_NaslovVIES
             // 
@@ -350,7 +356,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.txt_spremanjeOIB);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbox_OIB);
             this.panel1.Controls.Add(this.txt_adresa);
             this.panel1.Controls.Add(this.txt_naziv);
             this.panel1.Controls.Add(lbl_nazivObveznika);
@@ -364,22 +370,26 @@
             // 
             // txt_spremanjeOIB
             // 
+            this.txt_spremanjeOIB.BackColor = System.Drawing.Color.Gainsboro;
+            this.txt_spremanjeOIB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_spremanjeOIB.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_spremanjeOIB.Location = new System.Drawing.Point(275, 6);
             this.txt_spremanjeOIB.Name = "txt_spremanjeOIB";
-            this.txt_spremanjeOIB.Size = new System.Drawing.Size(122, 22);
+            this.txt_spremanjeOIB.ReadOnly = true;
+            this.txt_spremanjeOIB.Size = new System.Drawing.Size(122, 15);
             this.txt_spremanjeOIB.TabIndex = 70;
             // 
-            // comboBox1
+            // cbox_OIB
             // 
-            this.comboBox1.DataSource = this.ObveznikLookUpbindingSource1;
-            this.comboBox1.DisplayMember = "OIB";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(409, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 22);
-            this.comboBox1.TabIndex = 69;
-            this.comboBox1.ValueMember = "OIB";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbox_OIB.DataSource = this.ObveznikLookUpbindingSource1;
+            this.cbox_OIB.DisplayMember = "OIB";
+            this.cbox_OIB.FormattingEnabled = true;
+            this.cbox_OIB.Location = new System.Drawing.Point(409, 4);
+            this.cbox_OIB.Name = "cbox_OIB";
+            this.cbox_OIB.Size = new System.Drawing.Size(154, 22);
+            this.cbox_OIB.TabIndex = 69;
+            this.cbox_OIB.ValueMember = "OIB";
+            this.cbox_OIB.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txt_adresa
             // 
@@ -582,6 +592,7 @@
             this.pbox_zpEdit.TabIndex = 71;
             this.pbox_zpEdit.TabStop = false;
             this.pbox_zpEdit.Visible = false;
+            this.pbox_zpEdit.Click += new System.EventHandler(this.pbox_zpEdit_Click);
             // 
             // pbox_zpOK
             // 
@@ -604,6 +615,7 @@
             this.pbox_addZP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbox_addZP.TabIndex = 69;
             this.pbox_addZP.TabStop = false;
+            this.pbox_addZP.Click += new System.EventHandler(this.pbox_addZP_Click);
             // 
             // txt_isporuke
             // 
@@ -637,7 +649,7 @@
             // 
             this.txt_RazdobljedateTimePicker.CustomFormat = "MM-yyyy";
             this.txt_RazdobljedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txt_RazdobljedateTimePicker.Location = new System.Drawing.Point(196, 21);
+            this.txt_RazdobljedateTimePicker.Location = new System.Drawing.Point(191, 21);
             this.txt_RazdobljedateTimePicker.Name = "txt_RazdobljedateTimePicker";
             this.txt_RazdobljedateTimePicker.ShowUpDown = true;
             this.txt_RazdobljedateTimePicker.Size = new System.Drawing.Size(134, 22);
@@ -660,7 +672,7 @@
             // pbox_dodatiAnalitiku
             // 
             this.pbox_dodatiAnalitiku.Image = global::VIES_SUSTAV.Properties.Resources.alert;
-            this.pbox_dodatiAnalitiku.Location = new System.Drawing.Point(39, 500);
+            this.pbox_dodatiAnalitiku.Location = new System.Drawing.Point(39, 491);
             this.pbox_dodatiAnalitiku.Name = "pbox_dodatiAnalitiku";
             this.pbox_dodatiAnalitiku.Size = new System.Drawing.Size(24, 24);
             this.pbox_dodatiAnalitiku.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -671,7 +683,7 @@
             // 
             this.lbl_alert.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_alert.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbl_alert.Location = new System.Drawing.Point(81, 500);
+            this.lbl_alert.Location = new System.Drawing.Point(81, 491);
             this.lbl_alert.Name = "lbl_alert";
             this.lbl_alert.Size = new System.Drawing.Size(350, 32);
             this.lbl_alert.TabIndex = 71;
@@ -720,17 +732,20 @@
             // 
             // ctxt_zadnjiID
             // 
+            this.ctxt_zadnjiID.BackColor = System.Drawing.Color.Gainsboro;
+            this.ctxt_zadnjiID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ctxt_zadnjiID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.getIDBindingSource, "Column1", true));
+            this.ctxt_zadnjiID.ForeColor = System.Drawing.Color.Gainsboro;
             this.ctxt_zadnjiID.Location = new System.Drawing.Point(531, 571);
             this.ctxt_zadnjiID.Name = "ctxt_zadnjiID";
-            this.ctxt_zadnjiID.Size = new System.Drawing.Size(43, 22);
+            this.ctxt_zadnjiID.Size = new System.Drawing.Size(43, 15);
             this.ctxt_zadnjiID.TabIndex = 73;
             // 
             // pbx_pdvsDodan
             // 
             this.pbx_pdvsDodan.Image = ((System.Drawing.Image)(resources.GetObject("pbx_pdvsDodan.Image")));
             this.pbx_pdvsDodan.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbx_pdvsDodan.InitialImage")));
-            this.pbx_pdvsDodan.Location = new System.Drawing.Point(38, 530);
+            this.pbx_pdvsDodan.Location = new System.Drawing.Point(38, 521);
             this.pbx_pdvsDodan.Name = "pbx_pdvsDodan";
             this.pbx_pdvsDodan.Size = new System.Drawing.Size(24, 24);
             this.pbx_pdvsDodan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -742,20 +757,68 @@
             // 
             this.lbl_pdvsDodan.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_pdvsDodan.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbl_pdvsDodan.Location = new System.Drawing.Point(81, 529);
+            this.lbl_pdvsDodan.Location = new System.Drawing.Point(81, 518);
             this.lbl_pdvsDodan.Name = "lbl_pdvsDodan";
-            this.lbl_pdvsDodan.Size = new System.Drawing.Size(139, 22);
+            this.lbl_pdvsDodan.Size = new System.Drawing.Size(139, 13);
             this.lbl_pdvsDodan.TabIndex = 75;
             this.lbl_pdvsDodan.Text = "Dodani PDV-S izvještaj";
             this.lbl_pdvsDodan.Visible = false;
+            // 
+            // pbox_provjera
+            // 
+            this.pbox_provjera.Image = ((System.Drawing.Image)(resources.GetObject("pbox_provjera.Image")));
+            this.pbox_provjera.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbox_provjera.InitialImage")));
+            this.pbox_provjera.Location = new System.Drawing.Point(38, 548);
+            this.pbox_provjera.Name = "pbox_provjera";
+            this.pbox_provjera.Size = new System.Drawing.Size(24, 24);
+            this.pbox_provjera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbox_provjera.TabIndex = 76;
+            this.pbox_provjera.TabStop = false;
+            this.pbox_provjera.Visible = false;
+            // 
+            // lbl_provjeraPdvS
+            // 
+            this.lbl_provjeraPdvS.AutoSize = true;
+            this.lbl_provjeraPdvS.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_provjeraPdvS.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbl_provjeraPdvS.Location = new System.Drawing.Point(81, 548);
+            this.lbl_provjeraPdvS.Name = "lbl_provjeraPdvS";
+            this.lbl_provjeraPdvS.Size = new System.Drawing.Size(160, 13);
+            this.lbl_provjeraPdvS.TabIndex = 77;
+            this.lbl_provjeraPdvS.Text = "PDV-S izvještaj - Provjeren";
+            this.lbl_provjeraPdvS.Visible = false;
+            // 
+            // lbl_ZPdodan
+            // 
+            this.lbl_ZPdodan.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ZPdodan.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_ZPdodan.Location = new System.Drawing.Point(81, 532);
+            this.lbl_ZPdodan.Name = "lbl_ZPdodan";
+            this.lbl_ZPdodan.Size = new System.Drawing.Size(139, 13);
+            this.lbl_ZPdodan.TabIndex = 78;
+            this.lbl_ZPdodan.Text = "Dodani ZP izvještaj";
+            this.lbl_ZPdodan.Visible = false;
+            // 
+            // btn_zatvori
+            // 
+            this.btn_zatvori.Location = new System.Drawing.Point(480, 532);
+            this.btn_zatvori.Name = "btn_zatvori";
+            this.btn_zatvori.Size = new System.Drawing.Size(100, 45);
+            this.btn_zatvori.TabIndex = 79;
+            this.btn_zatvori.Text = "Zatvori";
+            this.btn_zatvori.UseVisualStyleBackColor = true;
+            this.btn_zatvori.Click += new System.EventHandler(this.btn_zatvori_Click);
             // 
             // frm_UnosVIES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(602, 622);
+            this.Controls.Add(this.btn_zatvori);
+            this.Controls.Add(this.lbl_ZPdodan);
+            this.Controls.Add(this.lbl_provjeraPdvS);
+            this.Controls.Add(this.pbox_provjera);
             this.Controls.Add(this.lbl_pdvsDodan);
             this.Controls.Add(this.pbx_pdvsDodan);
             this.Controls.Add(lbl_stariID);
@@ -806,6 +869,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbl_VIESizvjestajBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getIDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_pdvsDodan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox_provjera)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -828,7 +892,7 @@
         private System.Windows.Forms.TextBox txt_OIB;
         private System.Windows.Forms.TextBox txt_adresa;
         private System.Windows.Forms.TextBox txt_naziv;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbox_OIB;
         private System.Windows.Forms.TextBox txt_spremanjeOIB;
         private System.Windows.Forms.Panel pnl_VIESizvjestaj;
         private System.Windows.Forms.DateTimePicker txt_RazdobljedateTimePicker;
@@ -864,5 +928,9 @@
         private System.Windows.Forms.PictureBox pbox_zpProvjeri;
         private System.Windows.Forms.PictureBox pbx_pdvsDodan;
         private System.Windows.Forms.Label lbl_pdvsDodan;
+        private System.Windows.Forms.PictureBox pbox_provjera;
+        private System.Windows.Forms.Label lbl_provjeraPdvS;
+        private System.Windows.Forms.Label lbl_ZPdodan;
+        private System.Windows.Forms.Button btn_zatvori;
     }
 }

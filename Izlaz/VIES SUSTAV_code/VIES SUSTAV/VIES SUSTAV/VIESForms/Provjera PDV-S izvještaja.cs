@@ -43,7 +43,7 @@ namespace VIES_SUSTAV.VIESForms
             try
             {
                 int sum = 0;
-                for (int i = 1; i < this.tbl_PdvSDataGridView.Rows.Count; ++i)
+                for (int i = 1; i < this.tbl_PdvSDataGridView.Rows.Count; i++)
                 {
                     sum += Convert.ToInt32(tbl_PdvSDataGridView.Rows[i].Cells[5].Value);
                 }
@@ -55,6 +55,11 @@ namespace VIES_SUSTAV.VIESForms
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btn_zatvori_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

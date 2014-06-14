@@ -12,10 +12,10 @@ namespace VIES_SUSTAV.VIESForms
     public partial class frm_unosPdvS : Form
     {
         string passedInText;
-        string passedInText2;
+        int passedInText2;
         string passedInText3;
 
-        public frm_unosPdvS(string OIB, string IDizvjesca, string razdoblje)
+        public frm_unosPdvS(string OIB, int IDizvjesca, string razdoblje)
         {
             InitializeComponent();
             this.passedInText = OIB;
@@ -46,13 +46,12 @@ namespace VIES_SUSTAV.VIESForms
 
         private void frm_PdvSizvjestaj_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ds_sifarnici_lookUp.tbl_sifarnikZemlja' table. You can move, or remove it, as needed.
-            this.tbl_sifarnikZemljaTableAdapter.Fill(this.ds_sifarnici_lookUp.tbl_sifarnikZemlja);
-           
+            
+            this.tbl_sifarnikZemljaTableAdapter.Fill(this.ds_sifarnici_lookUp.tbl_sifarnikZemlja);    
            
             this.tbl_ObveznikLookUpTableAdapter.FillByOIB(this.ds_T27.tbl_ObveznikLookUp,passedInText);
 
-            this.txt_IDizvjesca.Text = passedInText2;
+            this.txt_IDizvjesca.Text = passedInText2.ToString();
             this.txt_razdoblje.Text = passedInText3;
 
         }

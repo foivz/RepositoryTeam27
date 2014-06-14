@@ -81,6 +81,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_ViesUnos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ds_ZP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_ZP.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +154,12 @@
     <Compile Include="VIESForms\PregledPdvS.Designer.cs">
       <DependentUpon>PregledPdvS.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIESForms\Pregled_ZP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIESForms\Pregled_ZP.Designer.cs">
+      <DependentUpon>Pregled_ZP.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIESForms\Provjera PDV-S izvještaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +178,12 @@
     <Compile Include="VIESForms\Unos VIES izvještaja.Designer.cs">
       <DependentUpon>Unos VIES izvještaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIESForms\Unos ZP izvještaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIESForms\Unos ZP izvještaja.Designer.cs">
+      <DependentUpon>Unos ZP izvještaja.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="PorezniObveznikForms\Detaljni pregled.resx">
       <DependentUpon>Detaljni pregled.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +196,9 @@
     <EmbeddedResource Include="VIESForms\PregledPdvS.resx">
       <DependentUpon>PregledPdvS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VIESForms\Pregled_ZP.resx">
+      <DependentUpon>Pregled_ZP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIESForms\Provjera PDV-S izvještaja.resx">
       <DependentUpon>Provjera PDV-S izvještaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIESForms\Unos VIES izvještaja.resx">
       <DependentUpon>Unos VIES izvještaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIESForms\Unos ZP izvještaja.resx">
+      <DependentUpon>Unos ZP izvještaja.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="dsT27.dbml.layout">
       <DependentUpon>dsT27.dbml</DependentUpon>
@@ -282,6 +305,17 @@
     </None>
     <None Include="ds_ViesUnos.xss">
       <DependentUpon>ds_ViesUnos.xsd</DependentUpon>
+    </None>
+    <None Include="ds_ZP.xsc">
+      <DependentUpon>ds_ZP.xsd</DependentUpon>
+    </None>
+    <None Include="ds_ZP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_ZP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_ZP.xss">
+      <DependentUpon>ds_ZP.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

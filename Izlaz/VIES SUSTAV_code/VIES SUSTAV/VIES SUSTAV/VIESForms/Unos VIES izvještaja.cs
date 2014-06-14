@@ -44,7 +44,7 @@ namespace VIES_SUSTAV.VIESForms
         {
             try
             {
-                string OIB = (this.comboBox1.SelectedValue.ToString());
+                string OIB = (this.cbox_OIB.SelectedValue.ToString());
                 this.txt_spremanjeOIB.Text = OIB;
             }
             catch (SystemException except)
@@ -118,7 +118,7 @@ namespace VIES_SUSTAV.VIESForms
                 if (IdVies - prethodniId == 1)
                 {
                     string OIB = txt_OIB.Text;
-                    string IDizvjesca = txt_ID.Text;
+                    int IDizvjesca = int.Parse(txt_ID.Text.ToString());;
                     string razdoblje = txt_RazdobljedateTimePicker.Text;
 
                     frm_unosPdvS noviIzvjestajPdvS = new frm_unosPdvS(OIB, IDizvjesca, razdoblje);
@@ -168,6 +168,9 @@ namespace VIES_SUSTAV.VIESForms
 
                 frm_ProvjeraPDV_S novaProvjeraPdvS = new frm_ProvjeraPDV_S (OIB, IDizvjesca, razdoblje);
                 novaProvjeraPdvS.Show();
+
+                this.pbox_provjera.Visible = true;
+                this.lbl_provjeraPdvS.Visible = true;
             }
             catch (SystemException ex)
             {
@@ -175,14 +178,60 @@ namespace VIES_SUSTAV.VIESForms
             }
         }
 
-       
+        private void pbox_addZP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int IdVies = int.Parse(this.txt_ID.Text.ToString());
+                int prethodniId = int.Parse(this.ctxt_zadnjiID.Text.ToString());
+                if (IdVies - prethodniId == 1)
+                {
+                    string OIB = txt_OIB.Text;
+                    int IDizvjesca = int.Parse(txt_ID.Text.ToString());
+                    string razdoblje = txt_RazdobljedateTimePicker.Text;
 
-        
+                    frm_UnosZP noviIzvjestajZP = new frm_UnosZP(OIB, IDizvjesca, razdoblje);
+                    noviIzvjestajZP.Show();
+                    this.pbox_zpOK.Visible = true;
+                    this.pbox_zpEdit.Visible = true;
+                    this.pbox_zpProvjeri.Visible = true;
+                    this.pbox_addZP.Visible = false;
+                    this.pbx_pdvsDodan.Visible = true;
+                    this.lbl_ZPdodan.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Spremite VIES izvješće prije nastavka.");
+                }
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-      
-       
+        private void btn_zatvori_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-        
+        private void pbox_zpEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string OIB = txt_OIB.Text;
+                int IDizvjesca = int.Parse(txt_ID.Text.ToString());
+                string razdoblje = txt_RazdobljedateTimePicker.Text;
+
+                frm_pregledZP noviPregledZP = new frm_pregledZP(OIB, IDizvjesca, razdoblje);
+                noviPregledZP.Show();
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+    
         
     }
 }

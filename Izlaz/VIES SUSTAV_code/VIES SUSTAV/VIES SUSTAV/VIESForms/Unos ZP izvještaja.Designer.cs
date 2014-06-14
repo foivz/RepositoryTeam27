@@ -1,6 +1,6 @@
 ﻿namespace VIES_SUSTAV.VIESForms
 {
-    partial class frm_PregledPdvS
+    partial class frm_UnosZP
     {
         /// <summary>
         /// Required designer variable.
@@ -34,37 +34,31 @@
             System.Windows.Forms.Label oIBLabel;
             System.Windows.Forms.Label lbl_podrucniUred;
             System.Windows.Forms.Label lbl_poreznaIspostava;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PregledPdvS));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_UnosZP));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.txt_razdoblje = new System.Windows.Forms.TextBox();
             this.lbl_NaslovVIES = new System.Windows.Forms.Label();
             this.lbl_poreznaUprava = new System.Windows.Forms.Label();
             this.pnl_pripadajuciVIES = new System.Windows.Forms.Panel();
             this.btn_zatvori = new System.Windows.Forms.Button();
             this.txt_IDizvjesca = new System.Windows.Forms.TextBox();
             this.oIBTextBox = new System.Windows.Forms.TextBox();
-            this.LookUpObveznikbindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ds_T27 = new VIES_SUSTAV.ds_T27();
             this.nazivObveznikaTextBox = new System.Windows.Forms.TextBox();
             this.adresaTextBox = new System.Windows.Forms.TextBox();
             this.nazivIspostaveTextBox = new System.Windows.Forms.TextBox();
             this.nazivPodrucnogUredaTextBox = new System.Windows.Forms.TextBox();
-            this.txt_razdoblje = new System.Windows.Forms.TextBox();
+            this.LookUpObveznikbindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ds_T27 = new VIES_SUSTAV.ds_T27();
             this.tbl_ObveznikLookUpTableAdapter = new VIES_SUSTAV.ds_T27TableAdapters.tbl_ObveznikLookUpTableAdapter();
-            this.ds_PdvS = new VIES_SUSTAV.ds_PdvS();
-            this.tbl_PdvSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbl_PdvSTableAdapter = new VIES_SUSTAV.ds_PdvSTableAdapters.tbl_PdvSTableAdapter();
-            this.tableAdapterManager = new VIES_SUSTAV.ds_PdvSTableAdapters.TableAdapterManager();
-            this.tbl_PdvSDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ZemljabindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ds_sifarnici_lookUp = new VIES_SUSTAV.ds_sifarnici_lookUp();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PdvSbindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.ds_ZP = new VIES_SUSTAV.ds_ZP();
+            this.tbl_ZPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_ZPTableAdapter = new VIES_SUSTAV.ds_ZPTableAdapters.tbl_ZPTableAdapter();
+            this.tableAdapterManager = new VIES_SUSTAV.ds_ZPTableAdapters.TableAdapterManager();
+            this.tbl_ZPDataGridView = new System.Windows.Forms.DataGridView();
+            this.ZPbindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -77,23 +71,166 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.tbl_PdvSBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.ZemljabindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ds_sifarnici_lookUp = new VIES_SUSTAV.ds_sifarnici_lookUp();
             this.tbl_sifarnikZemljaTableAdapter = new VIES_SUSTAV.ds_sifarnici_lookUpTableAdapters.tbl_sifarnikZemljaTableAdapter();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             lbl_nazivObveznika = new System.Windows.Forms.Label();
             lbl_adresaLabel = new System.Windows.Forms.Label();
             oIBLabel = new System.Windows.Forms.Label();
             lbl_podrucniUred = new System.Windows.Forms.Label();
             lbl_poreznaIspostava = new System.Windows.Forms.Label();
             this.pnl_pripadajuciVIES.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LookUpObveznikbindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpObveznikbindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_T27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_PdvS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_PdvSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_PdvSDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_ZP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_ZPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_ZPDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ZPbindingNavigator)).BeginInit();
+            this.ZPbindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ZemljabindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_sifarnici_lookUp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PdvSbindingNavigator)).BeginInit();
-            this.PdvSbindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // txt_razdoblje
+            // 
+            this.txt_razdoblje.BackColor = System.Drawing.Color.Orange;
+            this.txt_razdoblje.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_razdoblje.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_razdoblje.ForeColor = System.Drawing.Color.Navy;
+            this.txt_razdoblje.Location = new System.Drawing.Point(305, 222);
+            this.txt_razdoblje.Name = "txt_razdoblje";
+            this.txt_razdoblje.ReadOnly = true;
+            this.txt_razdoblje.Size = new System.Drawing.Size(82, 13);
+            this.txt_razdoblje.TabIndex = 53;
+            this.txt_razdoblje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbl_NaslovVIES
+            // 
+            this.lbl_NaslovVIES.BackColor = System.Drawing.Color.Orange;
+            this.lbl_NaslovVIES.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_NaslovVIES.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NaslovVIES.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_NaslovVIES.Location = new System.Drawing.Point(3, 199);
+            this.lbl_NaslovVIES.Name = "lbl_NaslovVIES";
+            this.lbl_NaslovVIES.Size = new System.Drawing.Size(590, 44);
+            this.lbl_NaslovVIES.TabIndex = 52;
+            this.lbl_NaslovVIES.Text = "ZBIRNA PRIJAVA\r\nza razdoblje                ";
+            this.lbl_NaslovVIES.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_poreznaUprava
+            // 
+            this.lbl_poreznaUprava.BackColor = System.Drawing.Color.SteelBlue;
+            this.lbl_poreznaUprava.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_poreznaUprava.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_poreznaUprava.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lbl_poreznaUprava.Location = new System.Drawing.Point(1, 9);
+            this.lbl_poreznaUprava.Name = "lbl_poreznaUprava";
+            this.lbl_poreznaUprava.Size = new System.Drawing.Size(590, 24);
+            this.lbl_poreznaUprava.TabIndex = 51;
+            this.lbl_poreznaUprava.Text = "Ministarstvo financija - Porezna uprava";
+            this.lbl_poreznaUprava.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnl_pripadajuciVIES
+            // 
+            this.pnl_pripadajuciVIES.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_pripadajuciVIES.Controls.Add(this.btn_zatvori);
+            this.pnl_pripadajuciVIES.Controls.Add(this.txt_IDizvjesca);
+            this.pnl_pripadajuciVIES.Controls.Add(this.oIBTextBox);
+            this.pnl_pripadajuciVIES.Controls.Add(this.nazivObveznikaTextBox);
+            this.pnl_pripadajuciVIES.Controls.Add(this.adresaTextBox);
+            this.pnl_pripadajuciVIES.Controls.Add(this.nazivIspostaveTextBox);
+            this.pnl_pripadajuciVIES.Controls.Add(this.nazivPodrucnogUredaTextBox);
+            this.pnl_pripadajuciVIES.Controls.Add(lbl_nazivObveznika);
+            this.pnl_pripadajuciVIES.Controls.Add(lbl_adresaLabel);
+            this.pnl_pripadajuciVIES.Controls.Add(oIBLabel);
+            this.pnl_pripadajuciVIES.Controls.Add(lbl_podrucniUred);
+            this.pnl_pripadajuciVIES.Controls.Add(lbl_poreznaIspostava);
+            this.pnl_pripadajuciVIES.Location = new System.Drawing.Point(13, 42);
+            this.pnl_pripadajuciVIES.Name = "pnl_pripadajuciVIES";
+            this.pnl_pripadajuciVIES.Size = new System.Drawing.Size(580, 154);
+            this.pnl_pripadajuciVIES.TabIndex = 50;
+            // 
+            // btn_zatvori
+            // 
+            this.btn_zatvori.Location = new System.Drawing.Point(466, 40);
+            this.btn_zatvori.Name = "btn_zatvori";
+            this.btn_zatvori.Size = new System.Drawing.Size(100, 45);
+            this.btn_zatvori.TabIndex = 82;
+            this.btn_zatvori.Text = "Zatvori";
+            this.btn_zatvori.UseVisualStyleBackColor = true;
+            this.btn_zatvori.Click += new System.EventHandler(this.btn_zatvori_Click);
+            // 
+            // txt_IDizvjesca
+            // 
+            this.txt_IDizvjesca.Location = new System.Drawing.Point(496, 12);
+            this.txt_IDizvjesca.Name = "txt_IDizvjesca";
+            this.txt_IDizvjesca.Size = new System.Drawing.Size(70, 20);
+            this.txt_IDizvjesca.TabIndex = 81;
+            this.txt_IDizvjesca.Visible = false;
+            // 
+            // oIBTextBox
+            // 
+            this.oIBTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.oIBTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.oIBTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.LookUpObveznikbindingSource, "OIB", true));
+            this.oIBTextBox.ForeColor = System.Drawing.Color.Navy;
+            this.oIBTextBox.Location = new System.Drawing.Point(188, 74);
+            this.oIBTextBox.Name = "oIBTextBox";
+            this.oIBTextBox.ReadOnly = true;
+            this.oIBTextBox.Size = new System.Drawing.Size(183, 13);
+            this.oIBTextBox.TabIndex = 72;
+            // 
+            // nazivObveznikaTextBox
+            // 
+            this.nazivObveznikaTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.nazivObveznikaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nazivObveznikaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.LookUpObveznikbindingSource, "NazivObveznika", true));
+            this.nazivObveznikaTextBox.ForeColor = System.Drawing.Color.Navy;
+            this.nazivObveznikaTextBox.Location = new System.Drawing.Point(188, 99);
+            this.nazivObveznikaTextBox.Name = "nazivObveznikaTextBox";
+            this.nazivObveznikaTextBox.ReadOnly = true;
+            this.nazivObveznikaTextBox.Size = new System.Drawing.Size(283, 13);
+            this.nazivObveznikaTextBox.TabIndex = 74;
+            // 
+            // adresaTextBox
+            // 
+            this.adresaTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.adresaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adresaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.LookUpObveznikbindingSource, "Adresa", true));
+            this.adresaTextBox.ForeColor = System.Drawing.Color.Navy;
+            this.adresaTextBox.Location = new System.Drawing.Point(188, 129);
+            this.adresaTextBox.Name = "adresaTextBox";
+            this.adresaTextBox.ReadOnly = true;
+            this.adresaTextBox.Size = new System.Drawing.Size(283, 13);
+            this.adresaTextBox.TabIndex = 76;
+            // 
+            // nazivIspostaveTextBox
+            // 
+            this.nazivIspostaveTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.nazivIspostaveTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nazivIspostaveTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.LookUpObveznikbindingSource, "nazivIspostave", true));
+            this.nazivIspostaveTextBox.ForeColor = System.Drawing.Color.Navy;
+            this.nazivIspostaveTextBox.Location = new System.Drawing.Point(188, 45);
+            this.nazivIspostaveTextBox.Name = "nazivIspostaveTextBox";
+            this.nazivIspostaveTextBox.ReadOnly = true;
+            this.nazivIspostaveTextBox.Size = new System.Drawing.Size(183, 13);
+            this.nazivIspostaveTextBox.TabIndex = 78;
+            // 
+            // nazivPodrucnogUredaTextBox
+            // 
+            this.nazivPodrucnogUredaTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.nazivPodrucnogUredaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nazivPodrucnogUredaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.LookUpObveznikbindingSource, "nazivPodrucnogUreda", true));
+            this.nazivPodrucnogUredaTextBox.ForeColor = System.Drawing.Color.Navy;
+            this.nazivPodrucnogUredaTextBox.Location = new System.Drawing.Point(188, 16);
+            this.nazivPodrucnogUredaTextBox.Name = "nazivPodrucnogUredaTextBox";
+            this.nazivPodrucnogUredaTextBox.ReadOnly = true;
+            this.nazivPodrucnogUredaTextBox.Size = new System.Drawing.Size(183, 13);
+            this.nazivPodrucnogUredaTextBox.TabIndex = 80;
             // 
             // lbl_nazivObveznika
             // 
@@ -120,6 +257,8 @@
             // oIBLabel
             // 
             oIBLabel.AutoSize = true;
+            oIBLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            oIBLabel.ForeColor = System.Drawing.Color.Navy;
             oIBLabel.Location = new System.Drawing.Point(40, 75);
             oIBLabel.Name = "oIBLabel";
             oIBLabel.Size = new System.Drawing.Size(33, 14);
@@ -148,264 +287,64 @@
             lbl_poreznaIspostava.TabIndex = 69;
             lbl_poreznaIspostava.Text = "Porezna Ispostava:";
             // 
-            // lbl_NaslovVIES
+            // LookUpObveznikbindingSource
             // 
-            this.lbl_NaslovVIES.BackColor = System.Drawing.Color.Orange;
-            this.lbl_NaslovVIES.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbl_NaslovVIES.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NaslovVIES.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_NaslovVIES.Location = new System.Drawing.Point(3, 199);
-            this.lbl_NaslovVIES.Name = "lbl_NaslovVIES";
-            this.lbl_NaslovVIES.Size = new System.Drawing.Size(590, 44);
-            this.lbl_NaslovVIES.TabIndex = 51;
-            this.lbl_NaslovVIES.Text = "MJESEČNI IZVJEŠTAJ PDV-S\r\nza razdoblje                ";
-            this.lbl_NaslovVIES.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_poreznaUprava
-            // 
-            this.lbl_poreznaUprava.BackColor = System.Drawing.Color.SteelBlue;
-            this.lbl_poreznaUprava.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbl_poreznaUprava.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_poreznaUprava.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lbl_poreznaUprava.Location = new System.Drawing.Point(1, 9);
-            this.lbl_poreznaUprava.Name = "lbl_poreznaUprava";
-            this.lbl_poreznaUprava.Size = new System.Drawing.Size(590, 24);
-            this.lbl_poreznaUprava.TabIndex = 50;
-            this.lbl_poreznaUprava.Text = "Ministarstvo financija - Porezna uprava";
-            this.lbl_poreznaUprava.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnl_pripadajuciVIES
-            // 
-            this.pnl_pripadajuciVIES.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnl_pripadajuciVIES.Controls.Add(this.btn_zatvori);
-            this.pnl_pripadajuciVIES.Controls.Add(this.txt_IDizvjesca);
-            this.pnl_pripadajuciVIES.Controls.Add(this.oIBTextBox);
-            this.pnl_pripadajuciVIES.Controls.Add(this.nazivObveznikaTextBox);
-            this.pnl_pripadajuciVIES.Controls.Add(this.adresaTextBox);
-            this.pnl_pripadajuciVIES.Controls.Add(this.nazivIspostaveTextBox);
-            this.pnl_pripadajuciVIES.Controls.Add(this.nazivPodrucnogUredaTextBox);
-            this.pnl_pripadajuciVIES.Controls.Add(lbl_nazivObveznika);
-            this.pnl_pripadajuciVIES.Controls.Add(lbl_adresaLabel);
-            this.pnl_pripadajuciVIES.Controls.Add(oIBLabel);
-            this.pnl_pripadajuciVIES.Controls.Add(lbl_podrucniUred);
-            this.pnl_pripadajuciVIES.Controls.Add(lbl_poreznaIspostava);
-            this.pnl_pripadajuciVIES.Location = new System.Drawing.Point(13, 42);
-            this.pnl_pripadajuciVIES.Name = "pnl_pripadajuciVIES";
-            this.pnl_pripadajuciVIES.Size = new System.Drawing.Size(580, 154);
-            this.pnl_pripadajuciVIES.TabIndex = 49;
-            // 
-            // btn_zatvori
-            // 
-            this.btn_zatvori.Location = new System.Drawing.Point(473, 3);
-            this.btn_zatvori.Name = "btn_zatvori";
-            this.btn_zatvori.Size = new System.Drawing.Size(100, 45);
-            this.btn_zatvori.TabIndex = 82;
-            this.btn_zatvori.Text = "Zatvori";
-            this.btn_zatvori.UseVisualStyleBackColor = true;
-            this.btn_zatvori.Click += new System.EventHandler(this.btn_zatvori_Click);
-            // 
-            // txt_IDizvjesca
-            // 
-            this.txt_IDizvjesca.Location = new System.Drawing.Point(496, 12);
-            this.txt_IDizvjesca.Name = "txt_IDizvjesca";
-            this.txt_IDizvjesca.Size = new System.Drawing.Size(70, 22);
-            this.txt_IDizvjesca.TabIndex = 81;
-            this.txt_IDizvjesca.Visible = false;
-            // 
-            // oIBTextBox
-            // 
-            this.oIBTextBox.BackColor = System.Drawing.Color.DarkGray;
-            this.oIBTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.oIBTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.LookUpObveznikbindingSource1, "OIB", true));
-            this.oIBTextBox.ForeColor = System.Drawing.Color.Navy;
-            this.oIBTextBox.Location = new System.Drawing.Point(188, 74);
-            this.oIBTextBox.Name = "oIBTextBox";
-            this.oIBTextBox.ReadOnly = true;
-            this.oIBTextBox.Size = new System.Drawing.Size(183, 15);
-            this.oIBTextBox.TabIndex = 72;
-            // 
-            // LookUpObveznikbindingSource1
-            // 
-            this.LookUpObveznikbindingSource1.DataMember = "tbl_ObveznikLookUp";
-            this.LookUpObveznikbindingSource1.DataSource = this.ds_T27;
+            this.LookUpObveznikbindingSource.DataMember = "tbl_ObveznikLookUp";
+            this.LookUpObveznikbindingSource.DataSource = this.ds_T27;
             // 
             // ds_T27
             // 
             this.ds_T27.DataSetName = "ds_T27";
             this.ds_T27.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // nazivObveznikaTextBox
-            // 
-            this.nazivObveznikaTextBox.BackColor = System.Drawing.Color.DarkGray;
-            this.nazivObveznikaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nazivObveznikaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.LookUpObveznikbindingSource1, "NazivObveznika", true));
-            this.nazivObveznikaTextBox.ForeColor = System.Drawing.Color.Navy;
-            this.nazivObveznikaTextBox.Location = new System.Drawing.Point(188, 99);
-            this.nazivObveznikaTextBox.Name = "nazivObveznikaTextBox";
-            this.nazivObveznikaTextBox.ReadOnly = true;
-            this.nazivObveznikaTextBox.Size = new System.Drawing.Size(283, 15);
-            this.nazivObveznikaTextBox.TabIndex = 74;
-            // 
-            // adresaTextBox
-            // 
-            this.adresaTextBox.BackColor = System.Drawing.Color.DarkGray;
-            this.adresaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.adresaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.LookUpObveznikbindingSource1, "Adresa", true));
-            this.adresaTextBox.ForeColor = System.Drawing.Color.Navy;
-            this.adresaTextBox.Location = new System.Drawing.Point(188, 129);
-            this.adresaTextBox.Name = "adresaTextBox";
-            this.adresaTextBox.ReadOnly = true;
-            this.adresaTextBox.Size = new System.Drawing.Size(283, 15);
-            this.adresaTextBox.TabIndex = 76;
-            // 
-            // nazivIspostaveTextBox
-            // 
-            this.nazivIspostaveTextBox.BackColor = System.Drawing.Color.DarkGray;
-            this.nazivIspostaveTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nazivIspostaveTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.LookUpObveznikbindingSource1, "nazivIspostave", true));
-            this.nazivIspostaveTextBox.ForeColor = System.Drawing.Color.Navy;
-            this.nazivIspostaveTextBox.Location = new System.Drawing.Point(188, 45);
-            this.nazivIspostaveTextBox.Name = "nazivIspostaveTextBox";
-            this.nazivIspostaveTextBox.ReadOnly = true;
-            this.nazivIspostaveTextBox.Size = new System.Drawing.Size(183, 15);
-            this.nazivIspostaveTextBox.TabIndex = 78;
-            // 
-            // nazivPodrucnogUredaTextBox
-            // 
-            this.nazivPodrucnogUredaTextBox.BackColor = System.Drawing.Color.DarkGray;
-            this.nazivPodrucnogUredaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nazivPodrucnogUredaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.LookUpObveznikbindingSource1, "nazivPodrucnogUreda", true));
-            this.nazivPodrucnogUredaTextBox.ForeColor = System.Drawing.Color.Navy;
-            this.nazivPodrucnogUredaTextBox.Location = new System.Drawing.Point(188, 16);
-            this.nazivPodrucnogUredaTextBox.Name = "nazivPodrucnogUredaTextBox";
-            this.nazivPodrucnogUredaTextBox.ReadOnly = true;
-            this.nazivPodrucnogUredaTextBox.Size = new System.Drawing.Size(183, 15);
-            this.nazivPodrucnogUredaTextBox.TabIndex = 80;
-            // 
-            // txt_razdoblje
-            // 
-            this.txt_razdoblje.BackColor = System.Drawing.Color.Orange;
-            this.txt_razdoblje.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_razdoblje.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_razdoblje.ForeColor = System.Drawing.Color.Navy;
-            this.txt_razdoblje.Location = new System.Drawing.Point(304, 222);
-            this.txt_razdoblje.Name = "txt_razdoblje";
-            this.txt_razdoblje.ReadOnly = true;
-            this.txt_razdoblje.Size = new System.Drawing.Size(82, 13);
-            this.txt_razdoblje.TabIndex = 52;
-            this.txt_razdoblje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // tbl_ObveznikLookUpTableAdapter
             // 
             this.tbl_ObveznikLookUpTableAdapter.ClearBeforeFill = true;
             // 
-            // ds_PdvS
+            // ds_ZP
             // 
-            this.ds_PdvS.DataSetName = "ds_PdvS";
-            this.ds_PdvS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.ds_ZP.DataSetName = "ds_ZP";
+            this.ds_ZP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tbl_PdvSBindingSource
+            // tbl_ZPBindingSource
             // 
-            this.tbl_PdvSBindingSource.DataMember = "tbl_PdvS";
-            this.tbl_PdvSBindingSource.DataSource = this.ds_PdvS;
+            this.tbl_ZPBindingSource.DataMember = "tbl_ZP";
+            this.tbl_ZPBindingSource.DataSource = this.ds_ZP;
             // 
-            // tbl_PdvSTableAdapter
+            // tbl_ZPTableAdapter
             // 
-            this.tbl_PdvSTableAdapter.ClearBeforeFill = true;
+            this.tbl_ZPTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.tbl_PdvSTableAdapter = this.tbl_PdvSTableAdapter;
-            this.tableAdapterManager.UpdateOrder = VIES_SUSTAV.ds_PdvSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.tbl_ZPTableAdapter = this.tbl_ZPTableAdapter;
+            this.tableAdapterManager.UpdateOrder = VIES_SUSTAV.ds_ZPTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // tbl_PdvSDataGridView
+            // tbl_ZPDataGridView
             // 
-            this.tbl_PdvSDataGridView.AutoGenerateColumns = false;
-            this.tbl_PdvSDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tbl_PdvSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tbl_PdvSDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tbl_ZPDataGridView.AutoGenerateColumns = false;
+            this.tbl_ZPDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbl_ZPDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            this.tbl_PdvSDataGridView.DataSource = this.tbl_PdvSBindingSource;
-            this.tbl_PdvSDataGridView.Location = new System.Drawing.Point(13, 266);
-            this.tbl_PdvSDataGridView.Name = "tbl_PdvSDataGridView";
-            this.tbl_PdvSDataGridView.Size = new System.Drawing.Size(580, 284);
-            this.tbl_PdvSDataGridView.TabIndex = 52;
-            this.tbl_PdvSDataGridView.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_PdvSDataGridView_RowLeave);
+            this.tbl_ZPDataGridView.DataSource = this.tbl_ZPBindingSource;
+            this.tbl_ZPDataGridView.Location = new System.Drawing.Point(13, 266);
+            this.tbl_ZPDataGridView.Name = "tbl_ZPDataGridView";
+            this.tbl_ZPDataGridView.Size = new System.Drawing.Size(578, 242);
+            this.tbl_ZPDataGridView.TabIndex = 53;
+            this.tbl_ZPDataGridView.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_ZPDataGridView_RowLeave);
             // 
-            // dataGridViewTextBoxColumn2
+            // ZPbindingNavigator
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID_VIES";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTextBoxColumn2.FillWeight = 175.311F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Evidencijski broj";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.ToolTipText = "Evidencijski broj VIES izvještaja _ NE UNOSI SE";
-            this.dataGridViewTextBoxColumn2.Width = 119;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Zemlja_isporuke";
-            this.dataGridViewTextBoxColumn3.DataSource = this.ZemljabindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "nazivZemlje";
-            this.dataGridViewTextBoxColumn3.FillWeight = 203.0457F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Zemlja isporuke";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn3.ToolTipText = "Zemlja iz koje je roba isporučena";
-            this.dataGridViewTextBoxColumn3.ValueMember = "sifraZemlje";
-            this.dataGridViewTextBoxColumn3.Width = 116;
-            // 
-            // ZemljabindingSource
-            // 
-            this.ZemljabindingSource.DataMember = "tbl_sifarnikZemlja";
-            this.ZemljabindingSource.DataSource = this.ds_sifarnici_lookUp;
-            // 
-            // ds_sifarnici_lookUp
-            // 
-            this.ds_sifarnici_lookUp.DataSetName = "ds_sifarnici_lookUp";
-            this.ds_sifarnici_lookUp.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "EU_isporucitelj";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn4.FillWeight = 10.82166F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "ID INO dobavljača";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ToolTipText = "Vat broj ino dobavljača";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Vrijednost_stjecanja";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTextBoxColumn5.FillWeight = 10.82166F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Vrijednost stjecanja";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ToolTipText = "Vrijednost izražena na fakturi, bez poreza, iskazana u kunama";
-            // 
-            // PdvSbindingNavigator
-            // 
-            this.PdvSbindingNavigator.AddNewItem = this.bindingNavigatorCountItem;
-            this.PdvSbindingNavigator.BindingSource = this.tbl_PdvSBindingSource;
-            this.PdvSbindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.PdvSbindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.PdvSbindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PdvSbindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ZPbindingNavigator.AddNewItem = this.bindingNavigatorCountItem;
+            this.ZPbindingNavigator.BindingSource = this.tbl_ZPBindingSource;
+            this.ZPbindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.ZPbindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.ZPbindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ZPbindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -418,16 +357,16 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.tbl_PdvSBindingNavigatorSaveItem});
-            this.PdvSbindingNavigator.Location = new System.Drawing.Point(0, 569);
-            this.PdvSbindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.PdvSbindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.PdvSbindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.PdvSbindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.PdvSbindingNavigator.Name = "PdvSbindingNavigator";
-            this.PdvSbindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.PdvSbindingNavigator.Size = new System.Drawing.Size(613, 25);
-            this.PdvSbindingNavigator.TabIndex = 53;
-            this.PdvSbindingNavigator.Text = "PDVSbindingNavigator";
+            this.ZPbindingNavigator.Location = new System.Drawing.Point(0, 529);
+            this.ZPbindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.ZPbindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.ZPbindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.ZPbindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.ZPbindingNavigator.Name = "ZPbindingNavigator";
+            this.ZPbindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.ZPbindingNavigator.Size = new System.Drawing.Size(613, 25);
+            this.ZPbindingNavigator.TabIndex = 54;
+            this.ZPbindingNavigator.Text = "PDVSbindingNavigator";
             // 
             // bindingNavigatorCountItem
             // 
@@ -524,41 +463,97 @@
             this.tbl_PdvSBindingNavigatorSaveItem.Name = "tbl_PdvSBindingNavigatorSaveItem";
             this.tbl_PdvSBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.tbl_PdvSBindingNavigatorSaveItem.Text = "Save";
+            this.tbl_PdvSBindingNavigatorSaveItem.Click += new System.EventHandler(this.tbl_PdvSBindingNavigatorSaveItem_Click);
+            // 
+            // ZemljabindingSource
+            // 
+            this.ZemljabindingSource.DataMember = "tbl_sifarnikZemlja";
+            this.ZemljabindingSource.DataSource = this.ds_sifarnici_lookUp;
+            // 
+            // ds_sifarnici_lookUp
+            // 
+            this.ds_sifarnici_lookUp.DataSetName = "ds_sifarnici_lookUp";
+            this.ds_sifarnici_lookUp.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbl_sifarnikZemljaTableAdapter
             // 
             this.tbl_sifarnikZemljaTableAdapter.ClearBeforeFill = true;
             // 
-            // frm_PregledPdvS
+            // dataGridViewTextBoxColumn2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID_VIES";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Evidencijski broj";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.ToolTipText = "Evidencijski broj VIES izvještaja";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Zemlja_primitka";
+            this.dataGridViewTextBoxColumn3.DataSource = this.ZemljabindingSource;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "nazivZemlje";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Zemlja primitka";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ToolTipText = "Šifra zemlje članice EU u koju je roba otpremljena";
+            this.dataGridViewTextBoxColumn3.ValueMember = "sifraZemlje";
+            this.dataGridViewTextBoxColumn3.Width = 94;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "EU_primatelj";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewTextBoxColumn4.HeaderText = "VAT broj INO primatelja";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ToolTipText = "VAt broj inozemnog poslovnog partnera";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Vrijednost_isporuka";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Vrijednost isporuka";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ToolTipText = "Fakturirana vrijednost isporuke, bez poreza, cijeli broj, u kunama. ";
+            // 
+            // frm_UnosZP
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(613, 594);
-            this.Controls.Add(this.PdvSbindingNavigator);
-            this.Controls.Add(this.tbl_PdvSDataGridView);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(613, 554);
+            this.Controls.Add(this.ZPbindingNavigator);
+            this.Controls.Add(this.tbl_ZPDataGridView);
             this.Controls.Add(this.txt_razdoblje);
             this.Controls.Add(this.lbl_NaslovVIES);
             this.Controls.Add(this.lbl_poreznaUprava);
             this.Controls.Add(this.pnl_pripadajuciVIES);
-            this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Navy;
-            this.Name = "frm_PregledPdvS";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pregled PDV-S izvještaja";
-            this.Load += new System.EventHandler(this.frm_PregledPdvS_Load);
+            this.Name = "frm_UnosZP";
+            this.Text = "Unos_ZP_izvještaja";
+            this.Load += new System.EventHandler(this.frm_UnosZP_Load);
             this.pnl_pripadajuciVIES.ResumeLayout(false);
             this.pnl_pripadajuciVIES.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LookUpObveznikbindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpObveznikbindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_T27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_PdvS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_PdvSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_PdvSDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_ZP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_ZPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_ZPDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ZPbindingNavigator)).EndInit();
+            this.ZPbindingNavigator.ResumeLayout(false);
+            this.ZPbindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ZemljabindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_sifarnici_lookUp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PdvSbindingNavigator)).EndInit();
-            this.PdvSbindingNavigator.ResumeLayout(false);
-            this.PdvSbindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,6 +561,7 @@
 
         #endregion
 
+        private System.Windows.Forms.TextBox txt_razdoblje;
         private System.Windows.Forms.Label lbl_NaslovVIES;
         private System.Windows.Forms.Label lbl_poreznaUprava;
         private System.Windows.Forms.Panel pnl_pripadajuciVIES;
@@ -576,16 +572,15 @@
         private System.Windows.Forms.TextBox adresaTextBox;
         private System.Windows.Forms.TextBox nazivIspostaveTextBox;
         private System.Windows.Forms.TextBox nazivPodrucnogUredaTextBox;
-        private System.Windows.Forms.TextBox txt_razdoblje;
-        private System.Windows.Forms.BindingSource LookUpObveznikbindingSource1;
+        private System.Windows.Forms.BindingSource LookUpObveznikbindingSource;
         private ds_T27 ds_T27;
         private ds_T27TableAdapters.tbl_ObveznikLookUpTableAdapter tbl_ObveznikLookUpTableAdapter;
-        private ds_PdvS ds_PdvS;
-        private System.Windows.Forms.BindingSource tbl_PdvSBindingSource;
-        private ds_PdvSTableAdapters.tbl_PdvSTableAdapter tbl_PdvSTableAdapter;
-        private ds_PdvSTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView tbl_PdvSDataGridView;
-        private System.Windows.Forms.BindingNavigator PdvSbindingNavigator;
+        private ds_ZP ds_ZP;
+        private System.Windows.Forms.BindingSource tbl_ZPBindingSource;
+        private ds_ZPTableAdapters.tbl_ZPTableAdapter tbl_ZPTableAdapter;
+        private ds_ZPTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView tbl_ZPDataGridView;
+        private System.Windows.Forms.BindingNavigator ZPbindingNavigator;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;

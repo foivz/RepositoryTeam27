@@ -38,6 +38,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_pripadajuciVIES = new System.Windows.Forms.Panel();
+            this.btn_provjeri = new System.Windows.Forms.Button();
             this.btn_zatvori = new System.Windows.Forms.Button();
             this.txt_IDizvjesca = new System.Windows.Forms.TextBox();
             this.oIBTextBox = new System.Windows.Forms.TextBox();
@@ -65,7 +66,7 @@
             this.tbl_sifarnikZemljaTableAdapter = new VIES_SUSTAV.ds_sifarnici_lookUpTableAdapters.tbl_sifarnikZemljaTableAdapter();
             this.lbl_ukupnoPDV_S = new System.Windows.Forms.Label();
             this.txt_ukupnoPdvS = new System.Windows.Forms.TextBox();
-            this.btn_provjeri = new System.Windows.Forms.Button();
+            this.hlp_PdvS = new System.Windows.Forms.HelpProvider();
             lbl_nazivObveznika = new System.Windows.Forms.Label();
             lbl_adresaLabel = new System.Windows.Forms.Label();
             oIBLabel = new System.Windows.Forms.Label();
@@ -155,6 +156,17 @@
             this.pnl_pripadajuciVIES.Size = new System.Drawing.Size(586, 154);
             this.pnl_pripadajuciVIES.TabIndex = 47;
             // 
+            // btn_provjeri
+            // 
+            this.btn_provjeri.BackColor = System.Drawing.Color.LawnGreen;
+            this.btn_provjeri.Location = new System.Drawing.Point(446, 69);
+            this.btn_provjeri.Name = "btn_provjeri";
+            this.btn_provjeri.Size = new System.Drawing.Size(131, 45);
+            this.btn_provjeri.TabIndex = 83;
+            this.btn_provjeri.Text = "Provjeri izvještaj";
+            this.btn_provjeri.UseVisualStyleBackColor = false;
+            this.btn_provjeri.Click += new System.EventHandler(this.btn_provjeri_Click);
+            // 
             // btn_zatvori
             // 
             this.btn_zatvori.Location = new System.Drawing.Point(479, 3);
@@ -163,6 +175,7 @@
             this.btn_zatvori.TabIndex = 82;
             this.btn_zatvori.Text = "Zatvori";
             this.btn_zatvori.UseVisualStyleBackColor = true;
+            this.btn_zatvori.Click += new System.EventHandler(this.btn_zatvori_Click);
             // 
             // txt_IDizvjesca
             // 
@@ -397,17 +410,6 @@
             this.txt_ukupnoPdvS.Size = new System.Drawing.Size(181, 22);
             this.txt_ukupnoPdvS.TabIndex = 54;
             // 
-            // btn_provjeri
-            // 
-            this.btn_provjeri.BackColor = System.Drawing.Color.LawnGreen;
-            this.btn_provjeri.Location = new System.Drawing.Point(446, 69);
-            this.btn_provjeri.Name = "btn_provjeri";
-            this.btn_provjeri.Size = new System.Drawing.Size(131, 45);
-            this.btn_provjeri.TabIndex = 83;
-            this.btn_provjeri.Text = "Provjeri izvještaj";
-            this.btn_provjeri.UseVisualStyleBackColor = false;
-            this.btn_provjeri.Click += new System.EventHandler(this.btn_provjeri_Click);
-            // 
             // frm_ProvjeraPDV_S
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -472,5 +474,6 @@
         private System.Windows.Forms.Label lbl_ukupnoPDV_S;
         private System.Windows.Forms.TextBox txt_ukupnoPdvS;
         private System.Windows.Forms.Button btn_provjeri;
+        private System.Windows.Forms.HelpProvider hlp_PdvS;
     }
 }
